@@ -1,0 +1,7 @@
+# Run on the Mac with a Release build installed on a booted simulator:
+#   maestro test apps/mobile/.maestro
+# Flows use testIDs only, so they don't depend on placeholder Arabic copy.
+flows:
+  - '*.yaml'
+excludeTags:
+  - wip

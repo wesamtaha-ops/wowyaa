@@ -1,19 +1,12 @@
-import { createHash, randomUUID } from 'node:crypto';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react-native';
-import { openNodeSqlite } from '@huroofi/offline-storage/node';
 import { HuroofiApp } from '../src/App';
 import type { BootstrapDeps } from '../src/bootstrap';
+import { testDeps } from './helpers/harness';
 
 jest.mock('expo-sqlite', () => ({}));
+jest.mock('expo-audio', () => ({}));
 
-const deps = (overrides: Partial<BootstrapDeps> = {}): BootstrapDeps => ({
-  openDb: async () => openNodeSqlite(),
-  sha256Hex: async (t) => createHash('sha256').update(t).digest('hex'),
-  now: () => Date.UTC(2026, 9, 26),
-  newId: randomUUID,
-  validationMode: 'draft',
-  ...overrides,
-});
+const deps = (overrides: Partial<BootstrapDeps> = {}) => testDeps(overrides).deps;
 
 describe('offline app shell', () => {
   it('boots to the home screen from local storage and bundled content only', async () => {
@@ -22,7 +15,7 @@ describe('offline app shell', () => {
     await render(<HuroofiApp deps={deps()} />);
     expect(await screen.findByTestId('offline-badge')).toBeTruthy();
     expect(screen.getByTestId('build-info').props.children).toMatch(
-      /^ar-foundations-v1@1\.0\.0-draft\.1 · db v1 · content 0 errors \/ \d+ warnings · activities construct_word@1$/,
+      /^ar-foundations-v1@1\.0\.0-draft\.1 · db v1 · content 0 errors \/ \d+ warnings · activities construct_word@1,match_sound_letter@1$/,
     );
     expect(fetchSpy).not.toHaveBeenCalled();
   });

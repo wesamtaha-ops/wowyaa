@@ -33,3 +33,15 @@ export function createActivityRegistry(): ActivityRegistry {
     list: () => [...defs.values()].map((d) => ({ type: d.type, version: d.version })),
   };
 }
+
+/** Config validators keyed `type@version`, as consumed by the curriculum validator. */
+export function configValidatorsFrom(
+  registry: ActivityRegistry,
+): ReadonlyMap<string, (raw: unknown) => unknown> {
+  return new Map(
+    registry.list().map(({ type, version }) => {
+      const def = registry.resolve(type, version);
+      return [`${type}@${version}`, (raw: unknown) => def.validateConfig(raw)] as const;
+    }),
+  );
+}

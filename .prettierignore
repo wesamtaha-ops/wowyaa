@@ -5,3 +5,5 @@ apps/mobile/android
 apps/mobile/ios
 apps/mobile/dist
 docs/Huroofi_AI_Technical_Implementation_Plan.md
+apps/mobile/src/audio/asset-sources.generated.ts
+packages/curriculum/packs/*/asset-manifest.json

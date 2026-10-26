@@ -17,6 +17,13 @@ export interface ActivityDefinition<TConfig = unknown, TState = unknown> {
   reduce(state: TState, event: GameEvent): TState;
   /** Returns null while the activity is still in progress. */
   evaluate(state: TState, config: TConfig): EvaluationResult | null;
+  /**
+   * How many times the child has submitted. Each increment is one attempt; the session
+   * derives a deterministic attempt id from it so a replayed submission records once.
+   */
+  submissionCount(state: TState): number;
+  /** Bundled assets the activity cannot run without (e.g. the prompt sound). */
+  requiredAssetIds(config: TConfig): string[];
 }
 
 export class ActivityConfigError extends Error {

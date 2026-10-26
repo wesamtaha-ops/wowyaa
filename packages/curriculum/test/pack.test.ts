@@ -6,10 +6,12 @@ import {
   constructWord,
   type ConstructWordConfig,
 } from '@huroofi/activities-word';
+import { MATCH_SOUND_LETTER_TYPE, matchSoundLetter } from '@huroofi/activities-audio';
 import { AR_FOUNDATIONS_V1_RAW, findCycles, validatePack, type ConfigValidators } from '../src';
 
-const validators: ConfigValidators = new Map([
+const validators: ConfigValidators = new Map<string, (raw: unknown) => unknown>([
   [`${CONSTRUCT_WORD_TYPE}@1`, (raw: unknown) => constructWord.validateConfig(raw)],
+  [`${MATCH_SOUND_LETTER_TYPE}@1`, (raw: unknown) => matchSoundLetter.validateConfig(raw)],
 ]);
 const clone = (): CurriculumPack => structuredClone(AR_FOUNDATIONS_V1_RAW) as CurriculumPack;
 const codes = (issues: { code: string }[]) => [...new Set(issues.map((i) => i.code))].sort();
@@ -83,6 +85,35 @@ describe('ar-foundations-v1 draft pack', () => {
         events.push(ev(item.activityId, { action: 'submit' }));
         const { evaluation } = replayActivity(constructWord, item.config, seed, events);
         expect(evaluation?.status, `${item.activityId} seed ${seed}`).toBe('correct');
+      }
+    }
+  });
+});
+
+describe('match_sound_letter answer keys (plan §8.2)', () => {
+  const pack = validatePack(AR_FOUNDATIONS_V1_RAW, { mode: 'draft', configValidators: validators })
+    .pack as CurriculumPack;
+  const items = pack.activities.filter((a) => a.type === MATCH_SOUND_LETTER_TYPE);
+
+  it('covers every match item', () => {
+    expect(items.length).toBe(26);
+  });
+
+  it('every item is solvable, and every distractor is scored wrong', () => {
+    for (const item of items) {
+      const cfg = matchSoundLetter.validateConfig(item.config);
+      for (const seed of [0, 9, 2026]) {
+        const right = replayActivity(matchSoundLetter, item.config, seed, [
+          ev(item.activityId, { action: 'choose', letterId: cfg.answerLetterId }),
+        ]);
+        expect(right.evaluation?.status, `${item.activityId} seed ${seed}`).toBe('correct');
+        expect(right.evaluation?.targetSkillIds).toEqual(item.targetSkillIds);
+        for (const wrong of cfg.choiceLetterIds.filter((c) => c !== cfg.answerLetterId)) {
+          const r = replayActivity(matchSoundLetter, item.config, seed, [
+            ev(item.activityId, { action: 'choose', letterId: wrong }),
+          ]);
+          expect(r.evaluation?.status).toBe('incorrect');
+        }
       }
     }
   });

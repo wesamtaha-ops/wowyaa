@@ -14,14 +14,18 @@
     "test": "jest --ci"
   },
   "dependencies": {
+    "@huroofi/activities-audio": "workspace:*",
     "@huroofi/activities-word": "workspace:*",
     "@huroofi/activity-sdk": "workspace:*",
+    "@huroofi/audio-engine": "workspace:*",
     "@huroofi/content-schema": "workspace:*",
     "@huroofi/curriculum": "workspace:*",
     "@huroofi/design-system": "workspace:*",
     "@huroofi/learning-engine": "workspace:*",
+    "@huroofi/mascot": "workspace:*",
     "@huroofi/offline-storage": "workspace:*",
     "expo": "~58.0.19",
+    "expo-audio": "~58.0.10",
     "expo-crypto": "~58.0.7",
     "expo-dev-client": "~58.0.15",
     "expo-sqlite": "~58.0.14",

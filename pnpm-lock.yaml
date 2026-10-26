@@ -35,12 +35,18 @@ importers:
 
   apps/mobile:
     dependencies:
+      '@huroofi/activities-audio':
+        specifier: workspace:*
+        version: link:../../packages/activities-audio
       '@huroofi/activities-word':
         specifier: workspace:*
         version: link:../../packages/activities-word
       '@huroofi/activity-sdk':
         specifier: workspace:*
         version: link:../../packages/activity-sdk
+      '@huroofi/audio-engine':
+        specifier: workspace:*
+        version: link:../../packages/audio-engine
       '@huroofi/content-schema':
         specifier: workspace:*
         version: link:../../packages/content-schema
@@ -53,12 +59,18 @@ importers:
       '@huroofi/learning-engine':
         specifier: workspace:*
         version: link:../../packages/learning-engine
+      '@huroofi/mascot':
+        specifier: workspace:*
+        version: link:../../packages/mascot
       '@huroofi/offline-storage':
         specifier: workspace:*
         version: link:../../packages/offline-storage
       expo:
         specifier: ~58.0.19
         version: 58.0.19(@babel/core@7.29.7)(@expo/dom-webview@58.0.2)(react-native@0.88.0(@babel/core@7.29.7)(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(typescript@6.0.3)
+      expo-audio:
+        specifier: ~58.0.10
+        version: 58.0.10(expo-asset@58.0.18(expo@58.0.19)(react-native@0.88.0(@babel/core@7.29.7)(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(typescript@6.0.3))(expo@58.0.19)(react-native@0.88.0(@babel/core@7.29.7)(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)
       expo-crypto:
         specifier: ~58.0.7
         version: 58.0.7(expo@58.0.19)
@@ -103,6 +115,21 @@ importers:
         specifier: 6.0.3
         version: 6.0.3
 
+  packages/activities-audio:
+    dependencies:
+      '@huroofi/activity-sdk':
+        specifier: workspace:*
+        version: link:../activity-sdk
+      '@huroofi/content-schema':
+        specifier: workspace:*
+        version: link:../content-schema
+      '@huroofi/game-core':
+        specifier: workspace:*
+        version: link:../game-core
+      zod:
+        specifier: 4.6.7
+        version: 4.6.7
+
   packages/activities-word:
     dependencies:
       '@huroofi/activity-sdk':
@@ -123,8 +150,17 @@ importers:
       '@huroofi/content-schema':
         specifier: workspace:*
         version: link:../content-schema
+      '@huroofi/game-core':
+        specifier: workspace:*
+        version: link:../game-core
 
   packages/ai-gateway: {}
+
+  packages/audio-engine:
+    dependencies:
+      '@huroofi/content-schema':
+        specifier: workspace:*
+        version: link:../content-schema
 
   packages/content-schema:
     dependencies:
@@ -141,6 +177,9 @@ importers:
         specifier: workspace:*
         version: link:../game-core
     devDependencies:
+      '@huroofi/activities-audio':
+        specifier: workspace:*
+        version: link:../activities-audio
       '@huroofi/activities-word':
         specifier: workspace:*
         version: link:../activities-word
@@ -158,6 +197,15 @@ importers:
         specifier: workspace:*
         version: link:../content-schema
 
+  packages/mascot:
+    dependencies:
+      '@huroofi/content-schema':
+        specifier: workspace:*
+        version: link:../content-schema
+      '@huroofi/design-system':
+        specifier: workspace:*
+        version: link:../design-system
+
   packages/offline-storage:
     dependencies:
       '@huroofi/content-schema':
@@ -167,11 +215,30 @@ importers:
         specifier: workspace:*
         version: link:../learning-engine
 
+  tooling/asset-pipeline:
+    dependencies:
+      '@huroofi/content-schema':
+        specifier: workspace:*
+        version: link:../../packages/content-schema
+      zod:
+        specifier: 4.6.7
+        version: 4.6.7
+    devDependencies:
+      tsx:
+        specifier: 4.23.15
+        version: 4.23.15
+
   tooling/content-validator:
     dependencies:
+      '@huroofi/activities-audio':
+        specifier: workspace:*
+        version: link:../../packages/activities-audio
       '@huroofi/activities-word':
         specifier: workspace:*
         version: link:../../packages/activities-word
+      '@huroofi/activity-sdk':
+        specifier: workspace:*
+        version: link:../../packages/activity-sdk
       '@huroofi/curriculum':
         specifier: workspace:*
         version: link:../../packages/curriculum
@@ -2455,6 +2522,14 @@ packages:
     resolution: {integrity: sha512-Cc49mpDd81hIIKw1DVDkL52a/S6MJlHLA+LirUHNR7qJJfopoHrSypg9rRuqvCUVW7/JKvXKqbFX43NynpVzmg==}
     peerDependencies:
       expo: '*'
+      react: '*'
+      react-native: '*'
+
+  expo-audio@58.0.10:
+    resolution: {integrity: sha512-GoOyd1JAb7l/bJ/UNc5QIrXqSK9QrEFF3ahjdONGt8V6PN3RXRsTcOJDMN6RmDc9kb0XPP34DJIxEd/ushH1RQ==}
+    peerDependencies:
+      expo: '*'
+      expo-asset: '*'
       react: '*'
       react-native: '*'
 
@@ -6926,6 +7001,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  expo-audio@58.0.10(expo-asset@58.0.18(expo@58.0.19)(react-native@0.88.0(@babel/core@7.29.7)(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(typescript@6.0.3))(expo@58.0.19)(react-native@0.88.0(@babel/core@7.29.7)(@types/react@19.3.0)(react@19.3.0))(react@19.3.0):
+    dependencies:
+      expo: 58.0.19(@babel/core@7.29.7)(@expo/dom-webview@58.0.2)(react-native@0.88.0(@babel/core@7.29.7)(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(typescript@6.0.3)
+      expo-asset: 58.0.18(expo@58.0.19)(react-native@0.88.0(@babel/core@7.29.7)(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(typescript@6.0.3)
+      react: 19.3.0
+      react-native: 0.88.0(@babel/core@7.29.7)(@types/react@19.3.0)(react@19.3.0)
 
   expo-constants@58.0.13(expo@58.0.19)(react-native@0.88.0(@babel/core@7.29.7)(@types/react@19.3.0)(react@19.3.0))(typescript@6.0.3):
     dependencies:
