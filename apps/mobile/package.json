@@ -1,0 +1,42 @@
+{
+  "name": "@huroofi/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "prebuild": "expo prebuild --clean",
+    "bundle:check": "expo export --platform android --platform ios --output-dir dist --no-minify",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint src index.ts",
+    "test": "jest --ci"
+  },
+  "dependencies": {
+    "@huroofi/activities-word": "workspace:*",
+    "@huroofi/activity-sdk": "workspace:*",
+    "@huroofi/content-schema": "workspace:*",
+    "@huroofi/curriculum": "workspace:*",
+    "@huroofi/design-system": "workspace:*",
+    "@huroofi/learning-engine": "workspace:*",
+    "@huroofi/offline-storage": "workspace:*",
+    "expo": "~58.0.19",
+    "expo-crypto": "~58.0.7",
+    "expo-dev-client": "~58.0.15",
+    "expo-sqlite": "~58.0.14",
+    "expo-status-bar": "~58.0.4",
+    "react": "19.3.0",
+    "react-native": "0.88.0",
+    "react-native-safe-area-context": "~5.10.1"
+  },
+  "devDependencies": {
+    "@testing-library/react-native": "14.1.0",
+    "@types/jest": "30.0.0",
+    "@types/react": "~19.3.0",
+    "jest": "30.5.2",
+    "jest-expo": "~58.0.12",
+    "test-renderer": "1.3.1",
+    "typescript": "6.0.3"
+  }
+}
