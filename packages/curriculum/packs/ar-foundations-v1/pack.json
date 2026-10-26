@@ -1,0 +1,3474 @@
+{
+  "packId": "ar-foundations-v1",
+  "version": "1.0.0-draft.1",
+  "schemaVersion": 1,
+  "locale": "ar",
+  "status": "draft",
+  "letters": [
+    {
+      "letterId": "letter.alif",
+      "glyph": "ا",
+      "nameAr": "ألف",
+      "nameTranslit": "alif",
+      "dotFamily": null,
+      "connectsToNext": false,
+      "sounds": [
+        {
+          "soundId": "sound.alif",
+          "ipa": "aː",
+          "audioRef": "audio.letter.alif.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.alif.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.ba",
+      "glyph": "ب",
+      "nameAr": "باء",
+      "nameTranslit": "baa",
+      "dotFamily": "ba_ta_tha",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.ba",
+          "ipa": "b",
+          "audioRef": "audio.letter.ba.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.ba.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.ta",
+      "glyph": "ت",
+      "nameAr": "تاء",
+      "nameTranslit": "taa",
+      "dotFamily": "ba_ta_tha",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.ta",
+          "ipa": "t",
+          "audioRef": "audio.letter.ta.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.ta.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.tha",
+      "glyph": "ث",
+      "nameAr": "ثاء",
+      "nameTranslit": "thaa",
+      "dotFamily": "ba_ta_tha",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.tha",
+          "ipa": "θ",
+          "audioRef": "audio.letter.tha.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.tha.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.jim",
+      "glyph": "ج",
+      "nameAr": "جيم",
+      "nameTranslit": "jiim",
+      "dotFamily": "jim_hha_kha",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.jim",
+          "ipa": "d͡ʒ",
+          "audioRef": "audio.letter.jim.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.jim.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.hha",
+      "glyph": "ح",
+      "nameAr": "حاء",
+      "nameTranslit": "haa (pharyngeal)",
+      "dotFamily": "jim_hha_kha",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.hha",
+          "ipa": "ħ",
+          "audioRef": "audio.letter.hha.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.hha.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.kha",
+      "glyph": "خ",
+      "nameAr": "خاء",
+      "nameTranslit": "khaa",
+      "dotFamily": "jim_hha_kha",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.kha",
+          "ipa": "x",
+          "audioRef": "audio.letter.kha.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.kha.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.dal",
+      "glyph": "د",
+      "nameAr": "دال",
+      "nameTranslit": "daal",
+      "dotFamily": "dal_dhal",
+      "connectsToNext": false,
+      "sounds": [
+        {
+          "soundId": "sound.dal",
+          "ipa": "d",
+          "audioRef": "audio.letter.dal.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.dal.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.dhal",
+      "glyph": "ذ",
+      "nameAr": "ذال",
+      "nameTranslit": "dhaal",
+      "dotFamily": "dal_dhal",
+      "connectsToNext": false,
+      "sounds": [
+        {
+          "soundId": "sound.dhal",
+          "ipa": "ð",
+          "audioRef": "audio.letter.dhal.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.dhal.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.ra",
+      "glyph": "ر",
+      "nameAr": "راء",
+      "nameTranslit": "raa",
+      "dotFamily": "ra_zay",
+      "connectsToNext": false,
+      "sounds": [
+        {
+          "soundId": "sound.ra",
+          "ipa": "r",
+          "audioRef": "audio.letter.ra.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.ra.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.zay",
+      "glyph": "ز",
+      "nameAr": "زاي",
+      "nameTranslit": "zaay",
+      "dotFamily": "ra_zay",
+      "connectsToNext": false,
+      "sounds": [
+        {
+          "soundId": "sound.zay",
+          "ipa": "z",
+          "audioRef": "audio.letter.zay.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.zay.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.sin",
+      "glyph": "س",
+      "nameAr": "سين",
+      "nameTranslit": "siin",
+      "dotFamily": "sin_shin",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.sin",
+          "ipa": "s",
+          "audioRef": "audio.letter.sin.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.sin.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.shin",
+      "glyph": "ش",
+      "nameAr": "شين",
+      "nameTranslit": "shiin",
+      "dotFamily": "sin_shin",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.shin",
+          "ipa": "ʃ",
+          "audioRef": "audio.letter.shin.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.shin.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.sad",
+      "glyph": "ص",
+      "nameAr": "صاد",
+      "nameTranslit": "saad",
+      "dotFamily": "sad_dad",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.sad",
+          "ipa": "sˤ",
+          "audioRef": "audio.letter.sad.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.sad.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.dad",
+      "glyph": "ض",
+      "nameAr": "ضاد",
+      "nameTranslit": "daad",
+      "dotFamily": "sad_dad",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.dad",
+          "ipa": "dˤ",
+          "audioRef": "audio.letter.dad.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.dad.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.tah",
+      "glyph": "ط",
+      "nameAr": "طاء",
+      "nameTranslit": "taa (emphatic)",
+      "dotFamily": "tah_zah",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.tah",
+          "ipa": "tˤ",
+          "audioRef": "audio.letter.tah.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.tah.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.zah",
+      "glyph": "ظ",
+      "nameAr": "ظاء",
+      "nameTranslit": "zaa (emphatic)",
+      "dotFamily": "tah_zah",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.zah",
+          "ipa": "ðˤ",
+          "audioRef": "audio.letter.zah.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.zah.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.ayn",
+      "glyph": "ع",
+      "nameAr": "عين",
+      "nameTranslit": "ayn",
+      "dotFamily": "ayn_ghayn",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.ayn",
+          "ipa": "ʕ",
+          "audioRef": "audio.letter.ayn.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.ayn.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.ghayn",
+      "glyph": "غ",
+      "nameAr": "غين",
+      "nameTranslit": "ghayn",
+      "dotFamily": "ayn_ghayn",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.ghayn",
+          "ipa": "ɣ",
+          "audioRef": "audio.letter.ghayn.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.ghayn.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.fa",
+      "glyph": "ف",
+      "nameAr": "فاء",
+      "nameTranslit": "faa",
+      "dotFamily": "fa_qaf",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.fa",
+          "ipa": "f",
+          "audioRef": "audio.letter.fa.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.fa.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.qaf",
+      "glyph": "ق",
+      "nameAr": "قاف",
+      "nameTranslit": "qaaf",
+      "dotFamily": "fa_qaf",
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.qaf",
+          "ipa": "q",
+          "audioRef": "audio.letter.qaf.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.qaf.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.kaf",
+      "glyph": "ك",
+      "nameAr": "كاف",
+      "nameTranslit": "kaaf",
+      "dotFamily": null,
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.kaf",
+          "ipa": "k",
+          "audioRef": "audio.letter.kaf.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.kaf.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.lam",
+      "glyph": "ل",
+      "nameAr": "لام",
+      "nameTranslit": "laam",
+      "dotFamily": null,
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.lam",
+          "ipa": "l",
+          "audioRef": "audio.letter.lam.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.lam.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.mim",
+      "glyph": "م",
+      "nameAr": "ميم",
+      "nameTranslit": "miim",
+      "dotFamily": null,
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.mim",
+          "ipa": "m",
+          "audioRef": "audio.letter.mim.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.mim.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.nun",
+      "glyph": "ن",
+      "nameAr": "نون",
+      "nameTranslit": "nuun",
+      "dotFamily": null,
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.nun",
+          "ipa": "n",
+          "audioRef": "audio.letter.nun.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.nun.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.heh",
+      "glyph": "ه",
+      "nameAr": "هاء",
+      "nameTranslit": "haa",
+      "dotFamily": null,
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.heh",
+          "ipa": "h",
+          "audioRef": "audio.letter.heh.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.heh.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.waw",
+      "glyph": "و",
+      "nameAr": "واو",
+      "nameTranslit": "waaw",
+      "dotFamily": null,
+      "connectsToNext": false,
+      "sounds": [
+        {
+          "soundId": "sound.waw",
+          "ipa": "w",
+          "audioRef": "audio.letter.waw.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.waw.name",
+      "exampleWordIds": {}
+    },
+    {
+      "letterId": "letter.ya",
+      "glyph": "ي",
+      "nameAr": "ياء",
+      "nameTranslit": "yaa",
+      "dotFamily": null,
+      "connectsToNext": true,
+      "sounds": [
+        {
+          "soundId": "sound.ya",
+          "ipa": "j",
+          "audioRef": "audio.letter.ya.sound"
+        }
+      ],
+      "nameAudioRef": "audio.letter.ya.name",
+      "exampleWordIds": {}
+    }
+  ],
+  "skills": [
+    {
+      "skillId": "letter.alif.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ ألف",
+        "en": "Recognizes the letter alif (ا)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": [],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.alif.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.alif.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ ألف بِصَوْتِهِ",
+        "en": "Associates ا with its sound /aː/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.alif.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.alif.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.alif.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ ألف",
+        "en": "Traces the isolated form of ا"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.alif.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ba.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ باء",
+        "en": "Recognizes the letter baa (ب)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ta.identify", "letter.tha.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ba.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.ba.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ باء بِصَوْتِهِ",
+        "en": "Associates ب with its sound /b/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ba.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ba.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.ba.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ باء",
+        "en": "Traces the isolated form of ب"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ba.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ta.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ تاء",
+        "en": "Recognizes the letter taa (ت)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ba.identify", "letter.tha.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ta.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.ta.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ تاء بِصَوْتِهِ",
+        "en": "Associates ت with its sound /t/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ta.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ta.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.ta.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ تاء",
+        "en": "Traces the isolated form of ت"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ta.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.tha.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ ثاء",
+        "en": "Recognizes the letter thaa (ث)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ba.identify", "letter.ta.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.tha.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.tha.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ ثاء بِصَوْتِهِ",
+        "en": "Associates ث with its sound /θ/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.tha.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.tha.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.tha.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ ثاء",
+        "en": "Traces the isolated form of ث"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.tha.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.jim.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ جيم",
+        "en": "Recognizes the letter jiim (ج)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.hha.identify", "letter.kha.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.jim.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.jim.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ جيم بِصَوْتِهِ",
+        "en": "Associates ج with its sound /d͡ʒ/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.jim.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.jim.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.jim.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ جيم",
+        "en": "Traces the isolated form of ج"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.jim.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.hha.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ حاء",
+        "en": "Recognizes the letter haa (pharyngeal) (ح)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.jim.identify", "letter.kha.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.hha.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.hha.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ حاء بِصَوْتِهِ",
+        "en": "Associates ح with its sound /ħ/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.hha.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.hha.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.hha.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ حاء",
+        "en": "Traces the isolated form of ح"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.hha.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.kha.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ خاء",
+        "en": "Recognizes the letter khaa (خ)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.jim.identify", "letter.hha.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.kha.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.kha.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ خاء بِصَوْتِهِ",
+        "en": "Associates خ with its sound /x/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.kha.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.kha.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.kha.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ خاء",
+        "en": "Traces the isolated form of خ"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.kha.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.dal.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ دال",
+        "en": "Recognizes the letter daal (د)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.dhal.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.dal.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.dal.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ دال بِصَوْتِهِ",
+        "en": "Associates د with its sound /d/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.dal.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.dal.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.dal.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ دال",
+        "en": "Traces the isolated form of د"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.dal.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.dhal.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ ذال",
+        "en": "Recognizes the letter dhaal (ذ)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.dal.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.dhal.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.dhal.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ ذال بِصَوْتِهِ",
+        "en": "Associates ذ with its sound /ð/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.dhal.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.dhal.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.dhal.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ ذال",
+        "en": "Traces the isolated form of ذ"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.dhal.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ra.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ راء",
+        "en": "Recognizes the letter raa (ر)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.zay.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ra.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.ra.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ راء بِصَوْتِهِ",
+        "en": "Associates ر with its sound /r/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ra.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ra.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.ra.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ راء",
+        "en": "Traces the isolated form of ر"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ra.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.zay.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ زاي",
+        "en": "Recognizes the letter zaay (ز)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ra.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.zay.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.zay.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ زاي بِصَوْتِهِ",
+        "en": "Associates ز with its sound /z/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.zay.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.zay.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.zay.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ زاي",
+        "en": "Traces the isolated form of ز"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.zay.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.sin.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ سين",
+        "en": "Recognizes the letter siin (س)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.shin.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.sin.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.sin.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ سين بِصَوْتِهِ",
+        "en": "Associates س with its sound /s/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.sin.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.sin.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.sin.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ سين",
+        "en": "Traces the isolated form of س"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.sin.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.shin.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ شين",
+        "en": "Recognizes the letter shiin (ش)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.sin.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.shin.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.shin.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ شين بِصَوْتِهِ",
+        "en": "Associates ش with its sound /ʃ/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.shin.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.shin.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.shin.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ شين",
+        "en": "Traces the isolated form of ش"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.shin.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.sad.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ صاد",
+        "en": "Recognizes the letter saad (ص)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.dad.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.sad.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.sad.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ صاد بِصَوْتِهِ",
+        "en": "Associates ص with its sound /sˤ/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.sad.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.sad.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.sad.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ صاد",
+        "en": "Traces the isolated form of ص"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.sad.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.dad.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ ضاد",
+        "en": "Recognizes the letter daad (ض)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.sad.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.dad.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.dad.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ ضاد بِصَوْتِهِ",
+        "en": "Associates ض with its sound /dˤ/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.dad.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.dad.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.dad.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ ضاد",
+        "en": "Traces the isolated form of ض"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.dad.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.tah.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ طاء",
+        "en": "Recognizes the letter taa (emphatic) (ط)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.zah.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.tah.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.tah.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ طاء بِصَوْتِهِ",
+        "en": "Associates ط with its sound /tˤ/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.tah.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.tah.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.tah.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ طاء",
+        "en": "Traces the isolated form of ط"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.tah.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.zah.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ ظاء",
+        "en": "Recognizes the letter zaa (emphatic) (ظ)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.tah.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.zah.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.zah.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ ظاء بِصَوْتِهِ",
+        "en": "Associates ظ with its sound /ðˤ/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.zah.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.zah.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.zah.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ ظاء",
+        "en": "Traces the isolated form of ظ"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.zah.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ayn.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ عين",
+        "en": "Recognizes the letter ayn (ع)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ghayn.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ayn.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.ayn.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ عين بِصَوْتِهِ",
+        "en": "Associates ع with its sound /ʕ/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ayn.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ayn.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.ayn.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ عين",
+        "en": "Traces the isolated form of ع"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ayn.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ghayn.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ غين",
+        "en": "Recognizes the letter ghayn (غ)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ayn.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ghayn.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.ghayn.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ غين بِصَوْتِهِ",
+        "en": "Associates غ with its sound /ɣ/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ghayn.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ghayn.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.ghayn.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ غين",
+        "en": "Traces the isolated form of غ"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ghayn.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.fa.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ فاء",
+        "en": "Recognizes the letter faa (ف)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.qaf.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.fa.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.fa.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ فاء بِصَوْتِهِ",
+        "en": "Associates ف with its sound /f/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.fa.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.fa.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.fa.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ فاء",
+        "en": "Traces the isolated form of ف"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.fa.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.qaf.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ قاف",
+        "en": "Recognizes the letter qaaf (ق)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.fa.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.qaf.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.qaf.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ قاف بِصَوْتِهِ",
+        "en": "Associates ق with its sound /q/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.qaf.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.qaf.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.qaf.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ قاف",
+        "en": "Traces the isolated form of ق"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.qaf.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.kaf.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ كاف",
+        "en": "Recognizes the letter kaaf (ك)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": [],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.kaf.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.kaf.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ كاف بِصَوْتِهِ",
+        "en": "Associates ك with its sound /k/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.kaf.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.kaf.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.kaf.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ كاف",
+        "en": "Traces the isolated form of ك"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.kaf.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.lam.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ لام",
+        "en": "Recognizes the letter laam (ل)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": [],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.lam.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.lam.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ لام بِصَوْتِهِ",
+        "en": "Associates ل with its sound /l/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.lam.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.lam.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.lam.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ لام",
+        "en": "Traces the isolated form of ل"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.lam.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.mim.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ ميم",
+        "en": "Recognizes the letter miim (م)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": [],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.mim.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.mim.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ ميم بِصَوْتِهِ",
+        "en": "Associates م with its sound /m/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.mim.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.mim.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.mim.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ ميم",
+        "en": "Traces the isolated form of م"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.mim.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.nun.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ نون",
+        "en": "Recognizes the letter nuun (ن)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": [],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.nun.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.nun.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ نون بِصَوْتِهِ",
+        "en": "Associates ن with its sound /n/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.nun.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.nun.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.nun.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ نون",
+        "en": "Traces the isolated form of ن"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.nun.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.heh.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ هاء",
+        "en": "Recognizes the letter haa (ه)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": [],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.heh.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.heh.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ هاء بِصَوْتِهِ",
+        "en": "Associates ه with its sound /h/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.heh.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.heh.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.heh.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ هاء",
+        "en": "Traces the isolated form of ه"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.heh.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.waw.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ واو",
+        "en": "Recognizes the letter waaw (و)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": [],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.waw.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.waw.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ واو بِصَوْتِهِ",
+        "en": "Associates و with its sound /w/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.waw.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.waw.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.waw.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ واو",
+        "en": "Traces the isolated form of و"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.waw.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ya.identify",
+      "version": 1,
+      "strand": "letter_identity",
+      "prerequisites": [],
+      "difficulty": 1,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَعَرَّفُ عَلَى حَرْفِ ياء",
+        "en": "Recognizes the letter yaa (ي)"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": [],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ya.sound",
+      "version": 1,
+      "strand": "phoneme_association",
+      "prerequisites": ["letter.ya.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَرْبِطُ حَرْفَ ياء بِصَوْتِهِ",
+        "en": "Associates ي with its sound /j/"
+      },
+      "supportedActivityTypes": ["match_sound_letter", "construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ya.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "letter.ya.trace",
+      "version": 1,
+      "strand": "tracing",
+      "prerequisites": ["letter.ya.identify"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَتَتَبَّعُ شَكْلَ حَرْفِ ياء",
+        "en": "Traces the isolated form of ي"
+      },
+      "supportedActivityTypes": ["trace_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["letter.ya.identify"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "vowel.fatha",
+      "version": 1,
+      "strand": "short_vowels",
+      "prerequisites": [],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَقْرَأُ الْفَتْحَةَ",
+        "en": "Reads fatha as a short /a/"
+      },
+      "supportedActivityTypes": ["construct_word", "match_sound_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": [],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "vowel.kasra",
+      "version": 1,
+      "strand": "short_vowels",
+      "prerequisites": ["vowel.fatha"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَقْرَأُ الْكَسْرَةَ",
+        "en": "Reads kasra as a short /i/"
+      },
+      "supportedActivityTypes": ["construct_word", "match_sound_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": [],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "vowel.damma",
+      "version": 1,
+      "strand": "short_vowels",
+      "prerequisites": ["vowel.fatha"],
+      "difficulty": 2,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَقْرَأُ الضَّمَّةَ",
+        "en": "Reads damma as a short /u/"
+      },
+      "supportedActivityTypes": ["construct_word", "match_sound_letter"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": [],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "long_vowel.alif",
+      "version": 1,
+      "strand": "short_vowels",
+      "prerequisites": ["vowel.fatha", "letter.alif.sound"],
+      "difficulty": 3,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَقْرَأُ الْأَلِفَ مَدًّا",
+        "en": "Reads alif as a long /aː/ after fatha"
+      },
+      "supportedActivityTypes": ["construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": [],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "decode.cvcvc_fatha",
+      "version": 1,
+      "strand": "decoding",
+      "prerequisites": ["vowel.fatha"],
+      "difficulty": 3,
+      "targetAgeBand": ["4-6", "7-9"],
+      "learningObjective": {
+        "ar": "يَبْنِي كَلِمَةً مِنْ ثَلَاثَةِ حُرُوفٍ مَفْتُوحَةٍ",
+        "en": "Builds three-letter words where every letter carries fatha"
+      },
+      "supportedActivityTypes": ["construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["vowel.fatha"],
+      "reviewedBy": []
+    },
+    {
+      "skillId": "decode.long_alif",
+      "version": 1,
+      "strand": "decoding",
+      "prerequisites": ["decode.cvcvc_fatha", "long_vowel.alif", "vowel.kasra"],
+      "difficulty": 4,
+      "targetAgeBand": ["7-9"],
+      "learningObjective": {
+        "ar": "يَبْنِي كَلِمَةً فِيهَا مَدٌّ بِالْأَلِفِ",
+        "en": "Builds words containing a long alif"
+      },
+      "supportedActivityTypes": ["construct_word"],
+      "passPolicy": {
+        "minCorrect": 3,
+        "window": 5,
+        "minMastery": 0.7
+      },
+      "remediationSkillIds": ["long_vowel.alif"],
+      "reviewedBy": []
+    }
+  ],
+  "words": [
+    {
+      "wordId": "word.qamar",
+      "display": "قَمَر",
+      "canonical": "قمر",
+      "letterIds": ["letter.qaf", "letter.mim", "letter.ra"],
+      "difficulty": 1,
+      "imageRef": "image.word.qamar",
+      "audioRef": "audio.word.qamar",
+      "concept": {
+        "en": "moon"
+      },
+      "aliases": [],
+      "reviewedBy": []
+    },
+    {
+      "wordId": "word.samak",
+      "display": "سَمَك",
+      "canonical": "سمك",
+      "letterIds": ["letter.sin", "letter.mim", "letter.kaf"],
+      "difficulty": 1,
+      "imageRef": "image.word.samak",
+      "audioRef": "audio.word.samak",
+      "concept": {
+        "en": "fish"
+      },
+      "aliases": [],
+      "reviewedBy": []
+    },
+    {
+      "wordId": "word.qalam",
+      "display": "قَلَم",
+      "canonical": "قلم",
+      "letterIds": ["letter.qaf", "letter.lam", "letter.mim"],
+      "difficulty": 1,
+      "imageRef": "image.word.qalam",
+      "audioRef": "audio.word.qalam",
+      "concept": {
+        "en": "pen"
+      },
+      "aliases": [],
+      "reviewedBy": [],
+      "notes": "Engineering seed; not in the plan illustrative list."
+    },
+    {
+      "wordId": "word.jamal",
+      "display": "جَمَل",
+      "canonical": "جمل",
+      "letterIds": ["letter.jim", "letter.mim", "letter.lam"],
+      "difficulty": 1,
+      "imageRef": "image.word.jamal",
+      "audioRef": "audio.word.jamal",
+      "concept": {
+        "en": "camel"
+      },
+      "aliases": [],
+      "reviewedBy": [],
+      "notes": "Engineering seed; not in the plan illustrative list."
+    },
+    {
+      "wordId": "word.walad",
+      "display": "وَلَد",
+      "canonical": "ولد",
+      "letterIds": ["letter.waw", "letter.lam", "letter.dal"],
+      "difficulty": 1,
+      "imageRef": "image.word.walad",
+      "audioRef": "audio.word.walad",
+      "concept": {
+        "en": "boy"
+      },
+      "aliases": [],
+      "reviewedBy": [],
+      "notes": "Engineering seed; not in the plan illustrative list."
+    },
+    {
+      "wordId": "word.bab",
+      "display": "بَاب",
+      "canonical": "باب",
+      "letterIds": ["letter.ba", "letter.alif", "letter.ba"],
+      "difficulty": 2,
+      "imageRef": "image.word.bab",
+      "audioRef": "audio.word.bab",
+      "concept": {
+        "en": "door"
+      },
+      "aliases": [],
+      "reviewedBy": [],
+      "notes": "Long alif."
+    },
+    {
+      "wordId": "word.kitab",
+      "display": "كِتَاب",
+      "canonical": "كتاب",
+      "letterIds": ["letter.kaf", "letter.ta", "letter.alif", "letter.ba"],
+      "difficulty": 3,
+      "imageRef": "image.word.kitab",
+      "audioRef": "audio.word.kitab",
+      "concept": {
+        "en": "book"
+      },
+      "aliases": [],
+      "reviewedBy": [],
+      "notes": "Kasra + long alif."
+    },
+    {
+      "wordId": "word.asad",
+      "display": "أَسَد",
+      "canonical": "أسد",
+      "letterIds": ["letter.alif", "letter.sin", "letter.dal"],
+      "difficulty": 2,
+      "imageRef": "image.word.asad",
+      "audioRef": "audio.word.asad",
+      "concept": {
+        "en": "lion"
+      },
+      "aliases": [],
+      "reviewedBy": [],
+      "notes": "Hamza on alif: blocked until a hamza skill exists."
+    },
+    {
+      "wordId": "word.tuffah",
+      "display": "تُفَّاح",
+      "canonical": "تفاح",
+      "letterIds": ["letter.ta", "letter.fa", "letter.alif", "letter.hha"],
+      "difficulty": 4,
+      "imageRef": "image.word.tuffah",
+      "audioRef": "audio.word.tuffah",
+      "concept": {
+        "en": "apple"
+      },
+      "aliases": [],
+      "reviewedBy": [],
+      "notes": "Damma, shadda and long alif: blocked until shadda skill exists."
+    },
+    {
+      "wordId": "word.shams",
+      "display": "شَمْس",
+      "canonical": "شمس",
+      "letterIds": ["letter.shin", "letter.mim", "letter.sin"],
+      "difficulty": 2,
+      "imageRef": "image.word.shams",
+      "audioRef": "audio.word.shams",
+      "concept": {
+        "en": "sun"
+      },
+      "aliases": [],
+      "reviewedBy": [],
+      "notes": "Sukun: blocked until a sukun skill exists."
+    },
+    {
+      "wordId": "word.bayt",
+      "display": "بَيْت",
+      "canonical": "بيت",
+      "letterIds": ["letter.ba", "letter.ya", "letter.ta"],
+      "difficulty": 3,
+      "imageRef": "image.word.bayt",
+      "audioRef": "audio.word.bayt",
+      "concept": {
+        "en": "house"
+      },
+      "aliases": [],
+      "reviewedBy": [],
+      "notes": "Diphthong with sukun: blocked until a diphthong skill exists."
+    }
+  ],
+  "confusionSets": [
+    {
+      "setId": "sound.ba-ta-tha",
+      "kind": "sound_discrimination",
+      "letterIds": ["letter.ba", "letter.ta", "letter.tha"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "sound.jim-hha-kha",
+      "kind": "sound_discrimination",
+      "letterIds": ["letter.jim", "letter.hha", "letter.kha"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "sound.dal-dhal",
+      "kind": "sound_discrimination",
+      "letterIds": ["letter.dal", "letter.dhal"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "sound.ra-zay",
+      "kind": "sound_discrimination",
+      "letterIds": ["letter.ra", "letter.zay"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "sound.sin-shin",
+      "kind": "sound_discrimination",
+      "letterIds": ["letter.sin", "letter.shin"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "sound.sad-dad",
+      "kind": "sound_discrimination",
+      "letterIds": ["letter.sad", "letter.dad"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "sound.tah-zah",
+      "kind": "sound_discrimination",
+      "letterIds": ["letter.tah", "letter.zah"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "sound.ayn-ghayn",
+      "kind": "sound_discrimination",
+      "letterIds": ["letter.ayn", "letter.ghayn"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "sound.fa-qaf",
+      "kind": "sound_discrimination",
+      "letterIds": ["letter.fa", "letter.qaf"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "sound.sin-sad",
+      "kind": "sound_discrimination",
+      "letterIds": ["letter.sin", "letter.sad"],
+      "rationale": "similar_sound"
+    },
+    {
+      "setId": "sound.ta-tah",
+      "kind": "sound_discrimination",
+      "letterIds": ["letter.ta", "letter.tah"],
+      "rationale": "similar_sound"
+    },
+    {
+      "setId": "sound.heh-hha",
+      "kind": "sound_discrimination",
+      "letterIds": ["letter.heh", "letter.hha"],
+      "rationale": "similar_sound"
+    },
+    {
+      "setId": "trace.ba-ta-tha",
+      "kind": "tracing",
+      "letterIds": ["letter.ba", "letter.ta", "letter.tha"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "trace.jim-hha-kha",
+      "kind": "tracing",
+      "letterIds": ["letter.jim", "letter.hha", "letter.kha"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "trace.dal-dhal",
+      "kind": "tracing",
+      "letterIds": ["letter.dal", "letter.dhal"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "trace.ra-zay",
+      "kind": "tracing",
+      "letterIds": ["letter.ra", "letter.zay"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "trace.sin-shin",
+      "kind": "tracing",
+      "letterIds": ["letter.sin", "letter.shin"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "trace.sad-dad",
+      "kind": "tracing",
+      "letterIds": ["letter.sad", "letter.dad"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "trace.tah-zah",
+      "kind": "tracing",
+      "letterIds": ["letter.tah", "letter.zah"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "trace.ayn-ghayn",
+      "kind": "tracing",
+      "letterIds": ["letter.ayn", "letter.ghayn"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "trace.fa-qaf",
+      "kind": "tracing",
+      "letterIds": ["letter.fa", "letter.qaf"],
+      "rationale": "dot_family"
+    },
+    {
+      "setId": "trace.nun-ba-ya",
+      "kind": "tracing",
+      "letterIds": ["letter.nun", "letter.ba", "letter.ya"],
+      "rationale": "similar_shape"
+    },
+    {
+      "setId": "trace.alif-lam-kaf",
+      "kind": "tracing",
+      "letterIds": ["letter.alif", "letter.lam", "letter.kaf"],
+      "rationale": "similar_shape"
+    },
+    {
+      "setId": "trace.mim-waw-heh",
+      "kind": "tracing",
+      "letterIds": ["letter.mim", "letter.waw", "letter.heh"],
+      "rationale": "similar_shape"
+    }
+  ],
+  "activities": [
+    {
+      "activityId": "act.match.ba-ta-tha.ba",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ba.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.ba.sound",
+        "answerLetterId": "letter.ba",
+        "choiceLetterIds": ["letter.ba", "letter.ta", "letter.tha"],
+        "confusionSetId": "sound.ba-ta-tha"
+      }
+    },
+    {
+      "activityId": "act.match.ba-ta-tha.ta",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ta.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.ta.sound",
+        "answerLetterId": "letter.ta",
+        "choiceLetterIds": ["letter.ba", "letter.ta", "letter.tha"],
+        "confusionSetId": "sound.ba-ta-tha"
+      }
+    },
+    {
+      "activityId": "act.match.ba-ta-tha.tha",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.tha.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.tha.sound",
+        "answerLetterId": "letter.tha",
+        "choiceLetterIds": ["letter.ba", "letter.ta", "letter.tha"],
+        "confusionSetId": "sound.ba-ta-tha"
+      }
+    },
+    {
+      "activityId": "act.match.jim-hha-kha.jim",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.jim.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.jim.sound",
+        "answerLetterId": "letter.jim",
+        "choiceLetterIds": ["letter.jim", "letter.hha", "letter.kha"],
+        "confusionSetId": "sound.jim-hha-kha"
+      }
+    },
+    {
+      "activityId": "act.match.jim-hha-kha.hha",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.hha.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.hha.sound",
+        "answerLetterId": "letter.hha",
+        "choiceLetterIds": ["letter.jim", "letter.hha", "letter.kha"],
+        "confusionSetId": "sound.jim-hha-kha"
+      }
+    },
+    {
+      "activityId": "act.match.jim-hha-kha.kha",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.kha.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.kha.sound",
+        "answerLetterId": "letter.kha",
+        "choiceLetterIds": ["letter.jim", "letter.hha", "letter.kha"],
+        "confusionSetId": "sound.jim-hha-kha"
+      }
+    },
+    {
+      "activityId": "act.match.dal-dhal.dal",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.dal.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.dal.sound",
+        "answerLetterId": "letter.dal",
+        "choiceLetterIds": ["letter.dal", "letter.dhal"],
+        "confusionSetId": "sound.dal-dhal"
+      }
+    },
+    {
+      "activityId": "act.match.dal-dhal.dhal",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.dhal.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.dhal.sound",
+        "answerLetterId": "letter.dhal",
+        "choiceLetterIds": ["letter.dal", "letter.dhal"],
+        "confusionSetId": "sound.dal-dhal"
+      }
+    },
+    {
+      "activityId": "act.match.ra-zay.ra",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ra.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.ra.sound",
+        "answerLetterId": "letter.ra",
+        "choiceLetterIds": ["letter.ra", "letter.zay"],
+        "confusionSetId": "sound.ra-zay"
+      }
+    },
+    {
+      "activityId": "act.match.ra-zay.zay",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.zay.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.zay.sound",
+        "answerLetterId": "letter.zay",
+        "choiceLetterIds": ["letter.ra", "letter.zay"],
+        "confusionSetId": "sound.ra-zay"
+      }
+    },
+    {
+      "activityId": "act.match.sin-shin.sin",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.sin.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.sin.sound",
+        "answerLetterId": "letter.sin",
+        "choiceLetterIds": ["letter.sin", "letter.shin"],
+        "confusionSetId": "sound.sin-shin"
+      }
+    },
+    {
+      "activityId": "act.match.sin-shin.shin",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.shin.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.shin.sound",
+        "answerLetterId": "letter.shin",
+        "choiceLetterIds": ["letter.sin", "letter.shin"],
+        "confusionSetId": "sound.sin-shin"
+      }
+    },
+    {
+      "activityId": "act.match.sad-dad.sad",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.sad.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.sad.sound",
+        "answerLetterId": "letter.sad",
+        "choiceLetterIds": ["letter.sad", "letter.dad"],
+        "confusionSetId": "sound.sad-dad"
+      }
+    },
+    {
+      "activityId": "act.match.sad-dad.dad",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.dad.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.dad.sound",
+        "answerLetterId": "letter.dad",
+        "choiceLetterIds": ["letter.sad", "letter.dad"],
+        "confusionSetId": "sound.sad-dad"
+      }
+    },
+    {
+      "activityId": "act.match.tah-zah.tah",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.tah.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.tah.sound",
+        "answerLetterId": "letter.tah",
+        "choiceLetterIds": ["letter.tah", "letter.zah"],
+        "confusionSetId": "sound.tah-zah"
+      }
+    },
+    {
+      "activityId": "act.match.tah-zah.zah",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.zah.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.zah.sound",
+        "answerLetterId": "letter.zah",
+        "choiceLetterIds": ["letter.tah", "letter.zah"],
+        "confusionSetId": "sound.tah-zah"
+      }
+    },
+    {
+      "activityId": "act.match.ayn-ghayn.ayn",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ayn.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.ayn.sound",
+        "answerLetterId": "letter.ayn",
+        "choiceLetterIds": ["letter.ayn", "letter.ghayn"],
+        "confusionSetId": "sound.ayn-ghayn"
+      }
+    },
+    {
+      "activityId": "act.match.ayn-ghayn.ghayn",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ghayn.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.ghayn.sound",
+        "answerLetterId": "letter.ghayn",
+        "choiceLetterIds": ["letter.ayn", "letter.ghayn"],
+        "confusionSetId": "sound.ayn-ghayn"
+      }
+    },
+    {
+      "activityId": "act.match.fa-qaf.fa",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.fa.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.fa.sound",
+        "answerLetterId": "letter.fa",
+        "choiceLetterIds": ["letter.fa", "letter.qaf"],
+        "confusionSetId": "sound.fa-qaf"
+      }
+    },
+    {
+      "activityId": "act.match.fa-qaf.qaf",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.qaf.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.qaf.sound",
+        "answerLetterId": "letter.qaf",
+        "choiceLetterIds": ["letter.fa", "letter.qaf"],
+        "confusionSetId": "sound.fa-qaf"
+      }
+    },
+    {
+      "activityId": "act.match.sin-sad.sin",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.sin.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.sin.sound",
+        "answerLetterId": "letter.sin",
+        "choiceLetterIds": ["letter.sin", "letter.sad"],
+        "confusionSetId": "sound.sin-sad"
+      }
+    },
+    {
+      "activityId": "act.match.sin-sad.sad",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.sad.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.sad.sound",
+        "answerLetterId": "letter.sad",
+        "choiceLetterIds": ["letter.sin", "letter.sad"],
+        "confusionSetId": "sound.sin-sad"
+      }
+    },
+    {
+      "activityId": "act.match.ta-tah.ta",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ta.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.ta.sound",
+        "answerLetterId": "letter.ta",
+        "choiceLetterIds": ["letter.ta", "letter.tah"],
+        "confusionSetId": "sound.ta-tah"
+      }
+    },
+    {
+      "activityId": "act.match.ta-tah.tah",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.tah.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.tah.sound",
+        "answerLetterId": "letter.tah",
+        "choiceLetterIds": ["letter.ta", "letter.tah"],
+        "confusionSetId": "sound.ta-tah"
+      }
+    },
+    {
+      "activityId": "act.match.heh-hha.heh",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.heh.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.heh.sound",
+        "answerLetterId": "letter.heh",
+        "choiceLetterIds": ["letter.heh", "letter.hha"],
+        "confusionSetId": "sound.heh-hha"
+      }
+    },
+    {
+      "activityId": "act.match.heh-hha.hha",
+      "type": "match_sound_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.hha.sound"],
+      "config": {
+        "promptAudioRef": "audio.letter.hha.sound",
+        "answerLetterId": "letter.hha",
+        "choiceLetterIds": ["letter.heh", "letter.hha"],
+        "confusionSetId": "sound.heh-hha"
+      }
+    },
+    {
+      "activityId": "act.trace.ba-ta-tha.ba",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ba.trace"],
+      "config": {
+        "letterId": "letter.ba",
+        "presentation": "isolated",
+        "confusionSetId": "trace.ba-ta-tha"
+      }
+    },
+    {
+      "activityId": "act.trace.ba-ta-tha.ta",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ta.trace"],
+      "config": {
+        "letterId": "letter.ta",
+        "presentation": "isolated",
+        "confusionSetId": "trace.ba-ta-tha"
+      }
+    },
+    {
+      "activityId": "act.trace.ba-ta-tha.tha",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.tha.trace"],
+      "config": {
+        "letterId": "letter.tha",
+        "presentation": "isolated",
+        "confusionSetId": "trace.ba-ta-tha"
+      }
+    },
+    {
+      "activityId": "act.trace.jim-hha-kha.jim",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.jim.trace"],
+      "config": {
+        "letterId": "letter.jim",
+        "presentation": "isolated",
+        "confusionSetId": "trace.jim-hha-kha"
+      }
+    },
+    {
+      "activityId": "act.trace.jim-hha-kha.hha",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.hha.trace"],
+      "config": {
+        "letterId": "letter.hha",
+        "presentation": "isolated",
+        "confusionSetId": "trace.jim-hha-kha"
+      }
+    },
+    {
+      "activityId": "act.trace.jim-hha-kha.kha",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.kha.trace"],
+      "config": {
+        "letterId": "letter.kha",
+        "presentation": "isolated",
+        "confusionSetId": "trace.jim-hha-kha"
+      }
+    },
+    {
+      "activityId": "act.trace.dal-dhal.dal",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.dal.trace"],
+      "config": {
+        "letterId": "letter.dal",
+        "presentation": "isolated",
+        "confusionSetId": "trace.dal-dhal"
+      }
+    },
+    {
+      "activityId": "act.trace.dal-dhal.dhal",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.dhal.trace"],
+      "config": {
+        "letterId": "letter.dhal",
+        "presentation": "isolated",
+        "confusionSetId": "trace.dal-dhal"
+      }
+    },
+    {
+      "activityId": "act.trace.ra-zay.ra",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ra.trace"],
+      "config": {
+        "letterId": "letter.ra",
+        "presentation": "isolated",
+        "confusionSetId": "trace.ra-zay"
+      }
+    },
+    {
+      "activityId": "act.trace.ra-zay.zay",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.zay.trace"],
+      "config": {
+        "letterId": "letter.zay",
+        "presentation": "isolated",
+        "confusionSetId": "trace.ra-zay"
+      }
+    },
+    {
+      "activityId": "act.trace.sin-shin.sin",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.sin.trace"],
+      "config": {
+        "letterId": "letter.sin",
+        "presentation": "isolated",
+        "confusionSetId": "trace.sin-shin"
+      }
+    },
+    {
+      "activityId": "act.trace.sin-shin.shin",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.shin.trace"],
+      "config": {
+        "letterId": "letter.shin",
+        "presentation": "isolated",
+        "confusionSetId": "trace.sin-shin"
+      }
+    },
+    {
+      "activityId": "act.trace.sad-dad.sad",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.sad.trace"],
+      "config": {
+        "letterId": "letter.sad",
+        "presentation": "isolated",
+        "confusionSetId": "trace.sad-dad"
+      }
+    },
+    {
+      "activityId": "act.trace.sad-dad.dad",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.dad.trace"],
+      "config": {
+        "letterId": "letter.dad",
+        "presentation": "isolated",
+        "confusionSetId": "trace.sad-dad"
+      }
+    },
+    {
+      "activityId": "act.trace.tah-zah.tah",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.tah.trace"],
+      "config": {
+        "letterId": "letter.tah",
+        "presentation": "isolated",
+        "confusionSetId": "trace.tah-zah"
+      }
+    },
+    {
+      "activityId": "act.trace.tah-zah.zah",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.zah.trace"],
+      "config": {
+        "letterId": "letter.zah",
+        "presentation": "isolated",
+        "confusionSetId": "trace.tah-zah"
+      }
+    },
+    {
+      "activityId": "act.trace.ayn-ghayn.ayn",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ayn.trace"],
+      "config": {
+        "letterId": "letter.ayn",
+        "presentation": "isolated",
+        "confusionSetId": "trace.ayn-ghayn"
+      }
+    },
+    {
+      "activityId": "act.trace.ayn-ghayn.ghayn",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ghayn.trace"],
+      "config": {
+        "letterId": "letter.ghayn",
+        "presentation": "isolated",
+        "confusionSetId": "trace.ayn-ghayn"
+      }
+    },
+    {
+      "activityId": "act.trace.fa-qaf.fa",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.fa.trace"],
+      "config": {
+        "letterId": "letter.fa",
+        "presentation": "isolated",
+        "confusionSetId": "trace.fa-qaf"
+      }
+    },
+    {
+      "activityId": "act.trace.fa-qaf.qaf",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.qaf.trace"],
+      "config": {
+        "letterId": "letter.qaf",
+        "presentation": "isolated",
+        "confusionSetId": "trace.fa-qaf"
+      }
+    },
+    {
+      "activityId": "act.trace.nun-ba-ya.nun",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.nun.trace"],
+      "config": {
+        "letterId": "letter.nun",
+        "presentation": "isolated",
+        "confusionSetId": "trace.nun-ba-ya"
+      }
+    },
+    {
+      "activityId": "act.trace.nun-ba-ya.ba",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ba.trace"],
+      "config": {
+        "letterId": "letter.ba",
+        "presentation": "isolated",
+        "confusionSetId": "trace.nun-ba-ya"
+      }
+    },
+    {
+      "activityId": "act.trace.nun-ba-ya.ya",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.ya.trace"],
+      "config": {
+        "letterId": "letter.ya",
+        "presentation": "isolated",
+        "confusionSetId": "trace.nun-ba-ya"
+      }
+    },
+    {
+      "activityId": "act.trace.alif-lam-kaf.alif",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.alif.trace"],
+      "config": {
+        "letterId": "letter.alif",
+        "presentation": "isolated",
+        "confusionSetId": "trace.alif-lam-kaf"
+      }
+    },
+    {
+      "activityId": "act.trace.alif-lam-kaf.lam",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.lam.trace"],
+      "config": {
+        "letterId": "letter.lam",
+        "presentation": "isolated",
+        "confusionSetId": "trace.alif-lam-kaf"
+      }
+    },
+    {
+      "activityId": "act.trace.alif-lam-kaf.kaf",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.kaf.trace"],
+      "config": {
+        "letterId": "letter.kaf",
+        "presentation": "isolated",
+        "confusionSetId": "trace.alif-lam-kaf"
+      }
+    },
+    {
+      "activityId": "act.trace.mim-waw-heh.mim",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.mim.trace"],
+      "config": {
+        "letterId": "letter.mim",
+        "presentation": "isolated",
+        "confusionSetId": "trace.mim-waw-heh"
+      }
+    },
+    {
+      "activityId": "act.trace.mim-waw-heh.waw",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.waw.trace"],
+      "config": {
+        "letterId": "letter.waw",
+        "presentation": "isolated",
+        "confusionSetId": "trace.mim-waw-heh"
+      }
+    },
+    {
+      "activityId": "act.trace.mim-waw-heh.heh",
+      "type": "trace_letter",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["letter.heh.trace"],
+      "config": {
+        "letterId": "letter.heh",
+        "presentation": "isolated",
+        "confusionSetId": "trace.mim-waw-heh"
+      }
+    },
+    {
+      "activityId": "act.construct.qamar",
+      "type": "construct_word",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": [
+        "decode.cvcvc_fatha",
+        "letter.mim.sound",
+        "letter.qaf.sound",
+        "letter.ra.sound"
+      ],
+      "config": {
+        "wordId": "word.qamar",
+        "answer": ["letter.qaf", "letter.mim", "letter.ra"],
+        "distractors": ["letter.fa", "letter.zay"],
+        "targetSkillIds": [
+          "decode.cvcvc_fatha",
+          "letter.mim.sound",
+          "letter.qaf.sound",
+          "letter.ra.sound"
+        ],
+        "dotFamilies": {
+          "letter.ra": "ra_zay",
+          "letter.zay": "ra_zay",
+          "letter.fa": "fa_qaf",
+          "letter.qaf": "fa_qaf"
+        }
+      }
+    },
+    {
+      "activityId": "act.construct.samak",
+      "type": "construct_word",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": [
+        "decode.cvcvc_fatha",
+        "letter.kaf.sound",
+        "letter.mim.sound",
+        "letter.sin.sound"
+      ],
+      "config": {
+        "wordId": "word.samak",
+        "answer": ["letter.sin", "letter.mim", "letter.kaf"],
+        "distractors": ["letter.shin", "letter.lam"],
+        "targetSkillIds": [
+          "decode.cvcvc_fatha",
+          "letter.kaf.sound",
+          "letter.mim.sound",
+          "letter.sin.sound"
+        ],
+        "dotFamilies": {
+          "letter.sin": "sin_shin",
+          "letter.shin": "sin_shin"
+        }
+      }
+    },
+    {
+      "activityId": "act.construct.qalam",
+      "type": "construct_word",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": [
+        "decode.cvcvc_fatha",
+        "letter.lam.sound",
+        "letter.mim.sound",
+        "letter.qaf.sound"
+      ],
+      "config": {
+        "wordId": "word.qalam",
+        "answer": ["letter.qaf", "letter.lam", "letter.mim"],
+        "distractors": ["letter.fa", "letter.kaf"],
+        "targetSkillIds": [
+          "decode.cvcvc_fatha",
+          "letter.lam.sound",
+          "letter.mim.sound",
+          "letter.qaf.sound"
+        ],
+        "dotFamilies": {
+          "letter.fa": "fa_qaf",
+          "letter.qaf": "fa_qaf"
+        }
+      }
+    },
+    {
+      "activityId": "act.construct.jamal",
+      "type": "construct_word",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": [
+        "decode.cvcvc_fatha",
+        "letter.jim.sound",
+        "letter.lam.sound",
+        "letter.mim.sound"
+      ],
+      "config": {
+        "wordId": "word.jamal",
+        "answer": ["letter.jim", "letter.mim", "letter.lam"],
+        "distractors": ["letter.hha", "letter.kha"],
+        "targetSkillIds": [
+          "decode.cvcvc_fatha",
+          "letter.jim.sound",
+          "letter.lam.sound",
+          "letter.mim.sound"
+        ],
+        "dotFamilies": {
+          "letter.jim": "jim_hha_kha",
+          "letter.hha": "jim_hha_kha",
+          "letter.kha": "jim_hha_kha"
+        }
+      }
+    },
+    {
+      "activityId": "act.construct.walad.assess",
+      "type": "construct_word",
+      "version": 1,
+      "purpose": "assessment",
+      "targetSkillIds": [
+        "decode.cvcvc_fatha",
+        "letter.dal.sound",
+        "letter.lam.sound",
+        "letter.waw.sound"
+      ],
+      "config": {
+        "wordId": "word.walad",
+        "answer": ["letter.waw", "letter.lam", "letter.dal"],
+        "distractors": ["letter.dhal", "letter.ra"],
+        "targetSkillIds": [
+          "decode.cvcvc_fatha",
+          "letter.dal.sound",
+          "letter.lam.sound",
+          "letter.waw.sound"
+        ],
+        "dotFamilies": {
+          "letter.dal": "dal_dhal",
+          "letter.dhal": "dal_dhal",
+          "letter.ra": "ra_zay"
+        }
+      }
+    },
+    {
+      "activityId": "act.construct.bab",
+      "type": "construct_word",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": ["decode.long_alif", "letter.alif.sound", "letter.ba.sound"],
+      "config": {
+        "wordId": "word.bab",
+        "answer": ["letter.ba", "letter.alif", "letter.ba"],
+        "distractors": ["letter.ta", "letter.nun"],
+        "targetSkillIds": ["decode.long_alif", "letter.alif.sound", "letter.ba.sound"],
+        "dotFamilies": {
+          "letter.ba": "ba_ta_tha",
+          "letter.ta": "ba_ta_tha"
+        }
+      }
+    },
+    {
+      "activityId": "act.construct.kitab",
+      "type": "construct_word",
+      "version": 1,
+      "purpose": "practice",
+      "targetSkillIds": [
+        "decode.long_alif",
+        "letter.alif.sound",
+        "letter.ba.sound",
+        "letter.kaf.sound",
+        "letter.ta.sound"
+      ],
+      "config": {
+        "wordId": "word.kitab",
+        "answer": ["letter.kaf", "letter.ta", "letter.alif", "letter.ba"],
+        "distractors": ["letter.tha", "letter.qaf"],
+        "targetSkillIds": [
+          "decode.long_alif",
+          "letter.alif.sound",
+          "letter.ba.sound",
+          "letter.kaf.sound",
+          "letter.ta.sound"
+        ],
+        "dotFamilies": {
+          "letter.ba": "ba_ta_tha",
+          "letter.ta": "ba_ta_tha",
+          "letter.tha": "ba_ta_tha",
+          "letter.qaf": "fa_qaf"
+        }
+      }
+    }
+  ],
+  "skillIdAliases": {}
+}

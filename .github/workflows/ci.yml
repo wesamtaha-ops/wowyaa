@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: Typecheck, lint, tests, content and offline gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm format:check
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm test
+      - name: Curriculum validation (draft)
+        run: pnpm validate:content
+      - name: Offline / privacy static guard
+        run: pnpm guard:offline
+      - name: Dependency audit (production, high+)
+        run: pnpm run audit
+
+  bundle:
+    name: Metro bundle smoke (Android + iOS JS)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: checks
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: expo export
+        working-directory: apps/mobile
+        env:
+          EXPO_OFFLINE: '1'
+        run: pnpm bundle:check

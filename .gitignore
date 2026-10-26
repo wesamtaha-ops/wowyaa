@@ -1,0 +1,10 @@
+node_modules/
+.turbo/
+dist/
+coverage/
+*.log
+.DS_Store
+.expo/
+apps/mobile/android/
+apps/mobile/ios/
+*.db
