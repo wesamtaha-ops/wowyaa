@@ -37,7 +37,11 @@ const sources = { 'audio.letter.ba.sound': 101 };
 
 const fakePlayer = (): AudioPlayer<number> & { played: number[] } => {
   const played: number[] = [];
-  return { played, play: vi.fn(async (s: number) => void played.push(s)), stop: vi.fn(async () => {}) };
+  return {
+    played,
+    play: vi.fn(async (s: number) => void played.push(s)),
+    stop: vi.fn(async () => {}),
+  };
 };
 
 describe('audio catalog', () => {

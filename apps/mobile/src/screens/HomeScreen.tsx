@@ -7,10 +7,15 @@ import { strings } from '../strings';
 import { layout } from './layout';
 
 /**
- * M1 shell: proves the offline boot path end to end (DB, migrations, validated content,
- * repository). Game screens arrive in M2; the parent gate and profile editing in M4.
+ * Profile picker: tap a child to play. The parent gate and profile editing arrive in M4.
  */
-export function HomeScreen({ app }: { app: BootedApp }) {
+export function HomeScreen({
+  app,
+  onPlay,
+}: {
+  app: BootedApp;
+  onPlay: (child: ChildProfile) => void;
+}) {
   const [children, setChildren] = useState<ChildProfile[] | null>(null);
 
   const refresh = useCallback(() => {
@@ -53,9 +58,12 @@ export function HomeScreen({ app }: { app: BootedApp }) {
       {children?.length === 0 && <Text style={layout.body}>{strings.noProfiles}</Text>}
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: spacing.md }}>
         {children?.map((child) => (
-          <View
+          <Pressable
             key={child.id}
             testID="child-profile"
+            accessibilityRole="button"
+            accessibilityLabel={`${strings.play}: ${child.displayName}`}
+            onPress={() => onPlay(child)}
             style={{
               minWidth: touchTargets.preReader * 2,
               minHeight: touchTargets.preReader,
@@ -67,7 +75,7 @@ export function HomeScreen({ app }: { app: BootedApp }) {
             }}
           >
             <Text style={layout.body}>{child.displayName}</Text>
-          </View>
+          </Pressable>
         ))}
       </View>
 

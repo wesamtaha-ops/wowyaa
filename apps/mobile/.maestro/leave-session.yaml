@@ -1,0 +1,21 @@
+# Leaving mid-session returns to the profile picker and the app stays usable offline.
+appId: app.huroofi.dev
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: add-child-7-9
+- tapOn:
+    id: child-profile
+- assertVisible:
+    id: play-screen
+- tapOn:
+    id: undo # disabled on a fresh board: must be a no-op, not a crash
+- tapOn:
+    id: exit
+- assertVisible:
+    id: offline-badge
+- tapOn:
+    id: child-profile
+- assertVisible:
+    id: play-screen

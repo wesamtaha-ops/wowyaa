@@ -13,5 +13,7 @@
     "lint": "eslint src test",
     "test": "vitest run"
   },
-  "dependencies": { "@huroofi/content-schema": "workspace:*" }
+  "dependencies": {
+    "@huroofi/content-schema": "workspace:*"
+  }
 }
