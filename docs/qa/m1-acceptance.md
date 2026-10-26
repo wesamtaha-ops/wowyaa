@@ -10,7 +10,18 @@
 | Offline app launches | 🟡 **Proven in Jest and Metro, not on a device**                            | App boots from local SQLite + bundled pack with `fetch` never called (Jest). Hermes bundles build for Android and iOS. No Development Build has run on a device or emulator |
 | Migration tests pass | ✅ (Node `node:sqlite`)                                                     | 6 migration tests + 16 repository tests + 1 driver test                                                                                                                     |
 
-**Verdict: M1 passes everything that can be verified without devices.** Two items stay open before calling M1 fully closed: (1) the first green GitHub Actions run, and (2) one Development Build booting in airplane mode on one Android and one iOS device. M2 should not start UI work until (2) is done, because Skia/Reanimated native setup depends on a working dev build.
+**Verdict: the M1 gate passes on iOS.** CI is green, migration tests pass, and a native Release build boots from local storage and bundled content on an iPad simulator. Still open, and none of these block M2: an Android build (needs Android Studio + an emulator), a true airplane-mode run on a physical device (the simulator shares the Mac's network), and keeping `expo-dev-client` out of store builds (M4 release checklist).
+
+## Native verification (2026-10-26, WESAM's MacBook Pro)
+
+- Toolchain: Node 22.23.2, pnpm 10.28.0 (pinned), Xcode 26.6 (17F113), CocoaPods 1.16.2, iOS 26.5 simulators. No Android SDK.
+- `pnpm install --frozen-lockfile` and `pnpm check` passed (exit 0).
+- `expo prebuild --platform ios --clean` installed 108 pods. `expo run:ios --configuration Release --no-bundler` reported Build Succeeded: 0 errors and 5 warnings (duplicate `-lc++`, dev-launcher script phase; none from expo-sqlite).
+- On launch, the home screen showed حُرُوفِي and the offline badge with no error screen. The footer read `ar-foundations-v1@1.0.0-draft.1 · db v1 · content 0 errors / 159 warnings · activities construct_word@1`.
+- Created two profiles, ran `simctl terminate` then `launch`: both profiles were still there.
+- WAL is active: `huroofi.db-wal` and `-shm` exist next to `huroofi.db`.
+- App logs across 3 launches had no app-initiated socket/HTTP entries and no guard lines. Release `console.warn` may not reach os_log, so this is consistent with zero attempts but does not prove it.
+- Evidence (on the Mac): `~/Documents/wowyaa-m1-evidence/` (3 screenshots, app/build/check logs).
 
 ## Commands run and exact results
 
