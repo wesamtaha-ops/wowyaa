@@ -143,6 +143,10 @@ export const constructWord: ActivityDefinition<ConstructWordConfig, ConstructWor
     return reduceEditing(state, action);
   },
 
+  submissionCount: (state) => state.submissionCount,
+  // Word audio and illustration are supportive; the puzzle is playable without them.
+  requiredAssetIds: () => [],
+
   evaluate(state, config): EvaluationResult | null {
     if (state.status !== 'submitted') return null;
     const placed = lettersInSlots(state);

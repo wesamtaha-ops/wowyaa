@@ -122,6 +122,10 @@ export const matchSoundLetter: ActivityDefinition<MatchSoundLetterConfig, MatchS
     }
   },
 
+  submissionCount: (state) => state.submissionCount,
+  // The sound is the question: without it the item must be hidden (plan §8.2).
+  requiredAssetIds: (config) => [config.promptAudioRef],
+
   evaluate(state, config): EvaluationResult | null {
     if (state.status !== 'submitted' || state.selected === null) return null;
     const correct = state.selected === state.answerLetterId;

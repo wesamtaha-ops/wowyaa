@@ -17,6 +17,8 @@ const noop: ActivityDefinition<{ n: number }, number> = {
   createInitialState: (c) => c.n,
   reduce: (s) => s + 1,
   evaluate: () => null,
+  submissionCount: () => 0,
+  requiredAssetIds: () => [],
 };
 
 describe('activity registry', () => {

@@ -9,7 +9,7 @@ import {
 import { MATCH_SOUND_LETTER_TYPE, matchSoundLetter } from '@huroofi/activities-audio';
 import { AR_FOUNDATIONS_V1_RAW, findCycles, validatePack, type ConfigValidators } from '../src';
 
-const validators: ConfigValidators = new Map([
+const validators: ConfigValidators = new Map<string, (raw: unknown) => unknown>([
   [`${CONSTRUCT_WORD_TYPE}@1`, (raw: unknown) => constructWord.validateConfig(raw)],
   [`${MATCH_SOUND_LETTER_TYPE}@1`, (raw: unknown) => matchSoundLetter.validateConfig(raw)],
 ]);
