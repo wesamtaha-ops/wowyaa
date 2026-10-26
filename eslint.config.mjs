@@ -55,6 +55,8 @@ export default tseslint.config(
       'packages/activities-*/src/**',
       'packages/learning-engine/src/**',
       'packages/ai-gateway/src/**',
+      'packages/audio-engine/src/**',
+      'packages/mascot/src/**',
     ],
     rules: {
       'no-restricted-imports': [

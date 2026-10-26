@@ -144,6 +144,12 @@ importers:
 
   packages/ai-gateway: {}
 
+  packages/audio-engine:
+    dependencies:
+      '@huroofi/content-schema':
+        specifier: workspace:*
+        version: link:../content-schema
+
   packages/content-schema:
     dependencies:
       zod:
@@ -187,6 +193,19 @@ importers:
       '@huroofi/learning-engine':
         specifier: workspace:*
         version: link:../learning-engine
+
+  tooling/asset-pipeline:
+    dependencies:
+      '@huroofi/content-schema':
+        specifier: workspace:*
+        version: link:../../packages/content-schema
+      zod:
+        specifier: 4.6.7
+        version: 4.6.7
+    devDependencies:
+      tsx:
+        specifier: 4.23.15
+        version: 4.23.15
 
   tooling/content-validator:
     dependencies:
