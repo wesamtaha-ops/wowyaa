@@ -1,0 +1,19 @@
+{
+  "name": "@huroofi/content-validator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "tsx src/cli.ts",
+    "validate:release": "tsx src/cli.ts --mode release",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@huroofi/activities-word": "workspace:*",
+    "@huroofi/curriculum": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "4.23.15"
+  }
+}
