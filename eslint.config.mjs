@@ -3,21 +3,43 @@
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
-const NETWORK_MODULES = ['axios', 'node:http', 'node:https', 'http', 'https', 'undici', 'cross-fetch', 'node-fetch'];
-const STORAGE_MODULES = ['expo-sqlite', 'node:sqlite', 'better-sqlite3', '@huroofi/offline-storage'];
+const NETWORK_MODULES = [
+  'axios',
+  'node:http',
+  'node:https',
+  'http',
+  'https',
+  'undici',
+  'cross-fetch',
+  'node-fetch',
+];
+const STORAGE_MODULES = [
+  'expo-sqlite',
+  'node:sqlite',
+  'better-sqlite3',
+  '@huroofi/offline-storage',
+];
 const UI_MODULES = ['react', 'react-native', 'expo', 'zustand'];
 
-const restrict = (modules, message) =>
-  modules.map((name) => ({ name, message }));
+const restrict = (modules, message) => modules.map((name) => ({ name, message }));
 
 export default tseslint.config(
-  { ignores: ['**/node_modules/**', '**/dist/**', '**/.turbo/**', 'apps/mobile/android/**', 'apps/mobile/ios/**', 'apps/mobile/.expo/**'] },
+  {
+    ignores: [
+      '**/node_modules/**',
+      '**/dist/**',
+      '**/.turbo/**',
+      'apps/mobile/android/**',
+      'apps/mobile/ios/**',
+      'apps/mobile/.expo/**',
+    ],
+  },
   js.configs.recommended,
   ...tseslint.configs.strict,
   {
     rules: {
       '@typescript-eslint/consistent-type-imports': 'error',
-      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     },
   },
   {
@@ -36,8 +58,14 @@ export default tseslint.config(
         'error',
         {
           paths: [
-            ...restrict(NETWORK_MODULES, 'Domain packages must not perform network I/O (plan §5, §12).'),
-            ...restrict(STORAGE_MODULES, 'Domain packages must use repository interfaces, never SQLite (plan §5).'),
+            ...restrict(
+              NETWORK_MODULES,
+              'Domain packages must not perform network I/O (plan §5, §12).',
+            ),
+            ...restrict(
+              STORAGE_MODULES,
+              'Domain packages must use repository interfaces, never SQLite (plan §5).',
+            ),
             ...restrict(UI_MODULES, 'Domain packages must stay UI-free and pure TypeScript.'),
           ],
         },
