@@ -70,6 +70,13 @@ importers:
       '@huroofi/game-core':
         specifier: workspace:*
         version: link:../game-core
+    devDependencies:
+      '@huroofi/activities-word':
+        specifier: workspace:*
+        version: link:../activities-word
+      '@huroofi/activity-sdk':
+        specifier: workspace:*
+        version: link:../activity-sdk
 
   packages/design-system: {}
 
