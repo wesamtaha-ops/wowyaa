@@ -10,7 +10,9 @@
     "lint": "eslint src"
   },
   "dependencies": {
+    "@huroofi/activities-audio": "workspace:*",
     "@huroofi/activities-word": "workspace:*",
+    "@huroofi/activity-sdk": "workspace:*",
     "@huroofi/curriculum": "workspace:*"
   },
   "devDependencies": {

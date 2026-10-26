@@ -1,10 +1,14 @@
+import { matchSoundLetter } from '@huroofi/activities-audio';
 import { constructWord } from '@huroofi/activities-word';
-import { createActivityRegistry, type ActivityRegistry } from '@huroofi/activity-sdk';
+import {
+  configValidatorsFrom,
+  createActivityRegistry,
+  type ActivityRegistry,
+} from '@huroofi/activity-sdk';
 import { CURRICULUM_SCHEMA_VERSION } from '@huroofi/content-schema';
 import {
   AR_FOUNDATIONS_V1_RAW,
   validatePack,
-  type ConfigValidators,
   type CurriculumPack,
   type ValidationMode,
   type ValidationReport,
@@ -63,12 +67,8 @@ export async function bootstrap(deps: BootstrapDeps): Promise<BootedApp> {
 
   const registry = createActivityRegistry();
   registry.register(constructWord);
-  const configValidators: ConfigValidators = new Map(
-    registry.list().map(({ type, version }) => {
-      const def = registry.resolve(type, version);
-      return [`${type}@${version}`, (raw: unknown) => def.validateConfig(raw)] as const;
-    }),
-  );
+  registry.register(matchSoundLetter);
+  const configValidators = configValidatorsFrom(registry);
 
   const validation = validatePack(AR_FOUNDATIONS_V1_RAW, {
     mode: deps.validationMode,

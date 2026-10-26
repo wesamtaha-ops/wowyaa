@@ -3,25 +3,21 @@
  *   pnpm validate:content                 # draft mode (engineering)
  *   pnpm --filter @huroofi/content-validator validate:release
  */
-import {
-  CONSTRUCT_WORD_TYPE,
-  CONSTRUCT_WORD_VERSION,
-  constructWord,
-} from '@huroofi/activities-word';
+import { matchSoundLetter } from '@huroofi/activities-audio';
+import { constructWord } from '@huroofi/activities-word';
+import { configValidatorsFrom, createActivityRegistry } from '@huroofi/activity-sdk';
 import { AR_FOUNDATIONS_V1_RAW, validatePack, type ValidationMode } from '@huroofi/curriculum';
 
 const modeArg = process.argv.indexOf('--mode');
 const mode: ValidationMode =
   modeArg > 0 && process.argv[modeArg + 1] === 'release' ? 'release' : 'draft';
 
+const registry = createActivityRegistry();
+registry.register(constructWord);
+registry.register(matchSoundLetter);
 const report = validatePack(AR_FOUNDATIONS_V1_RAW, {
   mode,
-  configValidators: new Map([
-    [
-      `${CONSTRUCT_WORD_TYPE}@${CONSTRUCT_WORD_VERSION}`,
-      (raw: unknown) => constructWord.validateConfig(raw),
-    ],
-  ]),
+  configValidators: configValidatorsFrom(registry),
 });
 
 const summarize = (issues: { code: string }[]) =>

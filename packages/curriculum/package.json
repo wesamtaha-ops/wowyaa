@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@huroofi/activities-word": "workspace:*",
-    "@huroofi/activity-sdk": "workspace:*"
+    "@huroofi/activity-sdk": "workspace:*",
+    "@huroofi/activities-audio": "workspace:*"
   }
 }
