@@ -130,6 +130,7 @@ export function PlayScreen({
       return;
     }
     await session.finish('complete');
+    setResult(null);
     setMascot(mascotStateFor({ kind: 'session_complete' }));
     setPhase({ kind: 'done' });
   }, [session]);
@@ -141,7 +142,12 @@ export function PlayScreen({
   }, [app, session, phase.kind, onExit]);
 
   return (
-    <ScrollView contentContainerStyle={layout.screen} testID="play-screen">
+    <ScrollView
+      contentContainerStyle={layout.screen}
+      testID="play-screen"
+      // A vertical finger stroke on the canvas must draw, not scroll the page.
+      scrollEnabled={current?.item.type !== TRACE_LETTER_TYPE}
+    >
       <View style={{ flexDirection: 'row', direction: 'rtl', justifyContent: 'space-between' }}>
         <ControlButton testID="exit" label={strings.exit} onPress={() => void onLeave()} />
         {current && (
@@ -200,7 +206,7 @@ export function PlayScreen({
           ) : null;
         })()}
 
-      {result && (
+      {current && result && (
         <Text
           testID="feedback"
           accessibilityLiveRegion="polite"

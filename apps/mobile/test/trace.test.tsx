@@ -5,6 +5,7 @@ import { AR_FOUNDATIONS_V1_TRACE_GUIDES_RAW } from '@huroofi/curriculum';
 import { colors } from '@huroofi/design-system';
 import { MASTERY_CONFIG_V1 } from '@huroofi/learning-engine';
 import { HuroofiApp } from '../src/App';
+import { SESSION_LENGTH } from '../src/game/play-session';
 import { count, startPlaying, testDeps } from './helpers/harness';
 
 jest.mock('expo-sqlite', () => ({}));
@@ -121,5 +122,25 @@ describe('Letter Tracing screen (geometry only, no ML model)', () => {
     await draw(idealStrokes(currentGuide()));
     await check();
     expect(await count(t.db(), 'SELECT hints_used AS n FROM activity_attempts')).toBe(1);
+  });
+
+  it('a vertical stroke draws instead of scrolling the page', async () => {
+    await setup();
+    expect(screen.getByTestId('play-screen').props.scrollEnabled).toBe(false);
+    expect(screen.getByTestId('trace-canvas').props.onResponderTerminationRequest()).toBe(false);
+  });
+
+  it("the last item's feedback is gone from the session-done screen", async () => {
+    await setup();
+    for (let i = 0; i < SESSION_LENGTH; i++) {
+      await screen.findByTestId('trace-canvas');
+      for (let k = 0; k < 3; k++) {
+        await draw(scribble());
+        await check();
+      }
+      await fireEvent.press(await screen.findByTestId('next'));
+    }
+    await screen.findByTestId('session-done');
+    expect(screen.queryByTestId('feedback')).toBeNull();
   });
 });

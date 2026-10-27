@@ -64,6 +64,7 @@ export function TraceView({
         onLayout={onLayout}
         onStartShouldSetResponder={() => !done}
         onMoveShouldSetResponder={() => !done}
+        onResponderTerminationRequest={() => false}
         onResponderGrant={(e) => {
           liveRef.current = [point(e)];
           setLive(liveRef.current);
