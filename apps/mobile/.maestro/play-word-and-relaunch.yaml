@@ -1,5 +1,4 @@
-# M2 acceptance 7: fresh launch -> profile -> finish a word -> kill -> relaunch -> progress kept.
-# The word is solved through the hint button so the flow doesn't depend on the seeded order.
+# M2/M3 acceptance: fresh launch -> profile -> finish an item -> next -> kill -> relaunch.
 appId: app.huroofi.dev
 ---
 - launchApp:
@@ -12,20 +11,9 @@ appId: app.huroofi.dev
     id: play-screen
 - assertVisible:
     id: mascot
-- repeat:
-    times: 4 # longest seed word has 4 letters; extra hints on a full board do nothing
-    commands:
-      - tapOn:
-          id: hint
-      - tapOn:
-          id: 'tile-.*-hinted'
-          optional: true
-- tapOn:
-    id: check
+- runFlow: subflows/finish-current-item.yaml
 - assertVisible:
     id: feedback
-- assertVisible:
-    id: next
 - tapOn:
     id: next
 - assertVisible:

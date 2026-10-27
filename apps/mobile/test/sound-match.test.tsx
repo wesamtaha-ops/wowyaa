@@ -52,10 +52,9 @@ const mascotState = () => screen.getByTestId('mascot').props.accessibilityValue.
 
 describe('Sound Match screen (fixture audio)', () => {
   it('plays the prompt on open and on replay, then accepts a retry after a miss', async () => {
-    const t = testDeps({ audioSources: sources });
+    const t = testDeps({ audioSources: sources, focusTypes: ['match_sound_letter'] });
     await render(<HuroofiApp deps={t.deps} />);
     await startPlaying();
-    // With 26 sound items among 33, this fixed seed opens on one; the assertion guards it.
     expect(screen.getByTestId('replay')).toBeTruthy();
     await waitFor(() => expect(t.audio.played).toHaveLength(1));
 

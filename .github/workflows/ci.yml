@@ -33,6 +33,8 @@ jobs:
         run: pnpm validate:content
       - name: Asset manifest up to date
         run: pnpm assets:check
+      - name: Trace guides are up to date
+        run: pnpm guides:check
       - name: Offline / privacy static guard
         run: pnpm guard:offline
       - name: Dependency audit (production, high+)

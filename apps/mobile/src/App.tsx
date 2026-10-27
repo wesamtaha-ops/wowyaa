@@ -62,6 +62,7 @@ export function HuroofiApp({ deps }: { deps: BootstrapDeps }) {
           childId={playing.childId}
           seed={playing.seed}
           now={deps.now}
+          {...(deps.focusTypes && { types: deps.focusTypes })}
           onExit={() => setPlaying(null)}
         />
       )}

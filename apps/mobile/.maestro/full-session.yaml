@@ -1,0 +1,26 @@
+# M3 acceptance: a whole scheduler-planned session. The variety cap guarantees a 5-item
+# session mixes Word Construction and Letter Tracing, so both screens are exercised.
+appId: app.huroofi.dev
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: add-child-4-6
+- tapOn:
+    id: child-profile
+- repeat:
+    times: 5
+    commands:
+      - runFlow: subflows/finish-current-item.yaml
+      - tapOn:
+          id: next
+- assertVisible:
+    id: session-done
+- tapOn:
+    id: home
+- assertVisible:
+    id: child-profile
+- stopApp
+- launchApp
+- assertVisible:
+    id: child-profile

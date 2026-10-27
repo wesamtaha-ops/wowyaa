@@ -5,8 +5,15 @@
  */
 import { matchSoundLetter } from '@huroofi/activities-audio';
 import { constructWord } from '@huroofi/activities-word';
+import { createTraceLetter } from '@huroofi/activities-writing';
+import { TraceGuideSetSchema } from '@huroofi/content-schema';
 import { configValidatorsFrom, createActivityRegistry } from '@huroofi/activity-sdk';
-import { AR_FOUNDATIONS_V1_RAW, validatePack, type ValidationMode } from '@huroofi/curriculum';
+import {
+  AR_FOUNDATIONS_V1_RAW,
+  AR_FOUNDATIONS_V1_TRACE_GUIDES_RAW,
+  validatePack,
+  type ValidationMode,
+} from '@huroofi/curriculum';
 
 const modeArg = process.argv.indexOf('--mode');
 const mode: ValidationMode =
@@ -15,6 +22,7 @@ const mode: ValidationMode =
 const registry = createActivityRegistry();
 registry.register(constructWord);
 registry.register(matchSoundLetter);
+registry.register(createTraceLetter(TraceGuideSetSchema.parse(AR_FOUNDATIONS_V1_TRACE_GUIDES_RAW)));
 const report = validatePack(AR_FOUNDATIONS_V1_RAW, {
   mode,
   configValidators: configValidatorsFrom(registry),

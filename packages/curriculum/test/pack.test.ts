@@ -7,9 +7,25 @@ import {
   type ConstructWordConfig,
 } from '@huroofi/activities-word';
 import { MATCH_SOUND_LETTER_TYPE, matchSoundLetter } from '@huroofi/activities-audio';
-import { AR_FOUNDATIONS_V1_RAW, findCycles, validatePack, type ConfigValidators } from '../src';
+import {
+  TRACE_LETTER_TYPE,
+  createTraceLetter,
+  idealStrokes,
+  scribble,
+} from '@huroofi/activities-writing';
+import { TraceGuideSetSchema } from '@huroofi/content-schema';
+import {
+  AR_FOUNDATIONS_V1_RAW,
+  AR_FOUNDATIONS_V1_TRACE_GUIDES_RAW,
+  findCycles,
+  validatePack,
+  type ConfigValidators,
+} from '../src';
 
+const GUIDES = TraceGuideSetSchema.parse(AR_FOUNDATIONS_V1_TRACE_GUIDES_RAW);
+const traceLetter = createTraceLetter(GUIDES);
 const validators: ConfigValidators = new Map<string, (raw: unknown) => unknown>([
+  [`${TRACE_LETTER_TYPE}@1`, (raw: unknown) => traceLetter.validateConfig(raw)],
   [`${CONSTRUCT_WORD_TYPE}@1`, (raw: unknown) => constructWord.validateConfig(raw)],
   [`${MATCH_SOUND_LETTER_TYPE}@1`, (raw: unknown) => matchSoundLetter.validateConfig(raw)],
 ]);
@@ -46,13 +62,10 @@ describe('ar-foundations-v1 draft pack', () => {
 
   it('surfaces editorial gaps as warnings, not silence', () => {
     expect(codes(report.warnings)).toEqual(
-      expect.arrayContaining([
-        'missing_assets',
-        'unreviewed_skill',
-        'unreviewed_word',
-        'config_unvalidated',
-      ]),
+      expect.arrayContaining(['missing_assets', 'unreviewed_skill', 'unreviewed_word']),
     );
+    // All three activity types now have registered validators (M3).
+    expect(codes(report.warnings)).not.toContain('config_unvalidated');
   });
 
   it('cannot pass release validation while unreviewed', () => {
@@ -115,6 +128,33 @@ describe('match_sound_letter answer keys (plan §8.2)', () => {
           expect(r.evaluation?.status).toBe('incorrect');
         }
       }
+    }
+  });
+});
+
+describe('trace_letter answer keys (plan §8.3)', () => {
+  const pack = validatePack(AR_FOUNDATIONS_V1_RAW, { mode: 'draft', configValidators: validators })
+    .pack as CurriculumPack;
+  const items = pack.activities.filter((a) => a.type === TRACE_LETTER_TYPE);
+
+  it('covers every trace item, each with a guide', () => {
+    expect(items.length).toBe(29);
+  });
+
+  it('a centerline trace passes and a scribble fails for every item', () => {
+    for (const item of items) {
+      const { letterId } = traceLetter.validateConfig(item.config);
+      const guide = GUIDES.guides.find((g) => g.letterId === letterId);
+      if (!guide) throw new Error(letterId);
+      const submit = (strokes: ReturnType<typeof scribble>) =>
+        replayActivity(traceLetter, item.config, 0, [
+          ...strokes.map((points) => ev(item.activityId, { action: 'stroke', points })),
+          ev(item.activityId, { action: 'submit' }),
+        ]).evaluation;
+      const good = submit(idealStrokes(guide));
+      expect(good?.status, item.activityId).toBe('correct');
+      expect(good?.targetSkillIds).toEqual(item.targetSkillIds);
+      expect(submit(scribble())?.status, item.activityId).toBe('incorrect');
     }
   });
 });

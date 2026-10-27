@@ -11,12 +11,14 @@
     "test": "turbo run test",
     "validate:content": "pnpm --filter @huroofi/content-validator run validate",
     "guard:offline": "pnpm --filter @huroofi/offline-network-guard run check",
-    "check": "pnpm typecheck && pnpm lint && pnpm test && pnpm validate:content && pnpm assets:check && pnpm guard:offline",
+    "check": "pnpm typecheck && pnpm lint && pnpm test && pnpm validate:content && pnpm assets:check && pnpm guides:check && pnpm guard:offline",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "audit": "pnpm audit --prod --audit-level=high",
     "assets:build": "pnpm --filter @huroofi/asset-pipeline run build",
-    "assets:check": "pnpm --filter @huroofi/asset-pipeline run check"
+    "assets:check": "pnpm --filter @huroofi/asset-pipeline run check",
+    "guides:build": "pnpm --filter @huroofi/glyph-guides run build",
+    "guides:check": "pnpm --filter @huroofi/glyph-guides run check"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
