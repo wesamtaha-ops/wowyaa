@@ -1,0 +1,21 @@
+{
+  "name": "@huroofi/glyph-guides",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsx src/cli.ts build",
+    "check": "tsx src/cli.ts check",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint src test",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@huroofi/content-schema": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/opentype.js": "1.3.10",
+    "opentype.js": "1.3.4",
+    "tsx": "4.23.15"
+  }
+}
