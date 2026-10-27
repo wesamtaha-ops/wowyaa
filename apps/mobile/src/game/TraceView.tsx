@@ -1,5 +1,10 @@
 import { useRef, useState } from 'react';
-import { View, type GestureResponderEvent, type LayoutChangeEvent } from 'react-native';
+import {
+  View,
+  useWindowDimensions,
+  type GestureResponderEvent,
+  type LayoutChangeEvent,
+} from 'react-native';
 import Svg, { Circle, Path, Polyline } from 'react-native-svg';
 import type { InkPoint, TraceLetterAction, TraceLetterState } from '@huroofi/activities-writing';
 import type { TraceGuide } from '@huroofi/content-schema';
@@ -9,7 +14,9 @@ import { ControlButton } from './ControlButton';
 
 /** Below this movement (normalized) a new point adds nothing but cost. */
 const MIN_STEP = 0.004;
-const DEFAULT_SIZE = 320;
+const MAX_SIZE = 420;
+/** Share of the screen height the canvas may take, so the controls stay on screen. */
+const MAX_HEIGHT_SHARE = 0.45;
 
 /**
  * Letter Tracing (plan §8.3). The letter is drawn large with its dots outlined; the child
@@ -26,7 +33,14 @@ export function TraceView({
   now: () => number;
   onAction: (action: TraceLetterAction) => void;
 }) {
-  const [size, setSize] = useState(DEFAULT_SIZE);
+  // An explicit square side: width '100%' with aspectRatio stretched tall on iOS.
+  const screen = useWindowDimensions();
+  const side = Math.max(
+    1,
+    Math.round(Math.min(screen.width - 2 * spacing.lg, screen.height * MAX_HEIGHT_SHARE, MAX_SIZE)),
+  );
+  const [measured, setSize] = useState<number | null>(null);
+  const size = measured ?? side;
   const [live, setLive] = useState<InkPoint[] | null>(null);
   const liveRef = useRef<InkPoint[] | null>(null);
   const done = state.status === 'submitted' && state.verdict?.status === 'correct';
@@ -74,9 +88,8 @@ export function TraceView({
           setLive(null);
         }}
         style={{
-          width: '100%',
-          maxWidth: 420,
-          aspectRatio: 1,
+          width: side,
+          height: side,
           backgroundColor: colors.surface,
           borderRadius: radii.lg,
         }}
