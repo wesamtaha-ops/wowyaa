@@ -145,6 +145,21 @@ importers:
         specifier: 4.6.7
         version: 4.6.7
 
+  packages/activities-writing:
+    dependencies:
+      '@huroofi/activity-sdk':
+        specifier: workspace:*
+        version: link:../activity-sdk
+      '@huroofi/ai-gateway':
+        specifier: workspace:*
+        version: link:../ai-gateway
+      '@huroofi/content-schema':
+        specifier: workspace:*
+        version: link:../content-schema
+      zod:
+        specifier: 4.6.7
+        version: 4.6.7
+
   packages/activity-sdk:
     dependencies:
       '@huroofi/content-schema':
@@ -183,6 +198,9 @@ importers:
       '@huroofi/activities-word':
         specifier: workspace:*
         version: link:../activities-word
+      '@huroofi/activities-writing':
+        specifier: workspace:*
+        version: link:../activities-writing
       '@huroofi/activity-sdk':
         specifier: workspace:*
         version: link:../activity-sdk
@@ -236,9 +254,15 @@ importers:
       '@huroofi/activities-word':
         specifier: workspace:*
         version: link:../../packages/activities-word
+      '@huroofi/activities-writing':
+        specifier: workspace:*
+        version: link:../../packages/activities-writing
       '@huroofi/activity-sdk':
         specifier: workspace:*
         version: link:../../packages/activity-sdk
+      '@huroofi/content-schema':
+        specifier: workspace:*
+        version: link:../../packages/content-schema
       '@huroofi/curriculum':
         specifier: workspace:*
         version: link:../../packages/curriculum

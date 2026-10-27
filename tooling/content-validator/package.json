@@ -12,6 +12,8 @@
   "dependencies": {
     "@huroofi/activities-audio": "workspace:*",
     "@huroofi/activities-word": "workspace:*",
+    "@huroofi/activities-writing": "workspace:*",
+    "@huroofi/content-schema": "workspace:*",
     "@huroofi/activity-sdk": "workspace:*",
     "@huroofi/curriculum": "workspace:*"
   },
