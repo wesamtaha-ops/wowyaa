@@ -214,6 +214,13 @@ importers:
       '@huroofi/content-schema':
         specifier: workspace:*
         version: link:../content-schema
+      '@huroofi/game-core':
+        specifier: workspace:*
+        version: link:../game-core
+    devDependencies:
+      '@huroofi/curriculum':
+        specifier: workspace:*
+        version: link:../curriculum
 
   packages/mascot:
     dependencies:
