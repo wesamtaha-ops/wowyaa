@@ -15,7 +15,7 @@ describe('offline app shell', () => {
     await render(<HuroofiApp deps={deps()} />);
     expect(await screen.findByTestId('offline-badge')).toBeTruthy();
     expect(screen.getByTestId('build-info').props.children).toMatch(
-      /^ar-foundations-v1@1\.0\.0-draft\.1 · db v1 · content 0 errors \/ \d+ warnings · activities construct_word@1,match_sound_letter@1$/,
+      /^ar-foundations-v1@1\.0\.0-draft\.1 · db v1 · content 0 errors \/ \d+ warnings · activities construct_word@1,match_sound_letter@1,trace_letter@1$/,
     );
     expect(fetchSpy).not.toHaveBeenCalled();
   });

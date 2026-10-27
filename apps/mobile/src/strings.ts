@@ -22,6 +22,8 @@ export const strings = {
   hint: 'مُسَاعَدَة',
   next: 'التَّالِي',
   replay: 'اِسْمَعْ مَرَّةً أُخْرَى',
+  clear: 'اِمْسَحْ',
+  traceLetter: 'اُكْتُبْ حَرْف',
   emptySlot: 'مَكَانٌ فَارِغ',
   wordModel: 'كَوِّنِ الْكَلِمَة',
   progress: (n: number, total: number) => `${n} / ${total}`,
@@ -31,9 +33,12 @@ export const strings = {
   feedback: {
     correct: 'رَائِع!',
     try_again: 'قَرِيبٌ! جَرِّبْ مَرَّةً أُخْرَى',
+    keep_going: 'أَكْمِلْ، أَنْتَ تَتَقَدَّمُ!',
   },
 } as const;
 
 export function feedbackText(feedbackKey: string): string {
-  return feedbackKey.endsWith('.correct') ? strings.feedback.correct : strings.feedback.try_again;
+  if (feedbackKey.endsWith('.correct')) return strings.feedback.correct;
+  if (feedbackKey.endsWith('.keep_going')) return strings.feedback.keep_going;
+  return strings.feedback.try_again;
 }

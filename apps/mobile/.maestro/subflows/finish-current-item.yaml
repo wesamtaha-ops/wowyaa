@@ -1,0 +1,35 @@
+# Finishes whatever item is on screen, ending with the "next" button visible.
+# Word: solved through hints. Tracing: swipes until correct or the 3-try skip appears.
+appId: app.huroofi.dev
+---
+- runFlow:
+    when:
+      visible:
+        id: word-prompt
+    commands:
+      - repeat:
+          times: 4 # longest seed word has 4 letters; extra hints on a full board do nothing
+          commands:
+            - tapOn:
+                id: hint
+            - tapOn:
+                id: 'tile-.*-hinted'
+                optional: true
+      - tapOn:
+          id: check
+- runFlow:
+    when:
+      visible:
+        id: trace-canvas
+    commands:
+      - repeat:
+          times: 3
+          commands:
+            - swipe:
+                from:
+                  id: trace-canvas
+                direction: RIGHT
+            - tapOn:
+                id: check
+- assertVisible:
+    id: next

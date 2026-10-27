@@ -17,12 +17,17 @@ describe('startPlaySession', () => {
     const session = await startPlaySession(app, { childId, seed: 7, now: () => 0, maxItems: 99 });
     const matchCount = PACK.activities.filter((a) => a.type === 'match_sound_letter').length;
     expect(session.hidden.filter((h) => h.reason === 'missing_asset')).toHaveLength(matchCount);
-    expect(session.current()?.item.type).toBe('construct_word');
+    expect(session.current()?.item.type).not.toBe('match_sound_letter');
   });
 
   it('records concurrent duplicate submits exactly once', async () => {
     const { t, app, childId } = await setup();
-    const session = await startPlaySession(app, { childId, seed: 7, now: () => 0 });
+    const session = await startPlaySession(app, {
+      childId,
+      seed: 7,
+      now: () => 0,
+      types: ['construct_word'],
+    });
     const answer = (session.current()?.item.config as { answer: string[] }).answer;
     const state = () =>
       session.current()?.run.state as { tiles: { tileId: string; letterId: string }[] };
@@ -56,5 +61,46 @@ describe('startPlaySession', () => {
       contentVersion: app.pack.version,
     });
     expect(again).toBe('duplicate');
+  });
+
+  it('plans sessions from stored mastery: every pick is explained, misses come back first', async () => {
+    const { app, childId } = await setup();
+    const first = await startPlaySession(app, {
+      childId,
+      seed: 11,
+      now: () => 1_000,
+      types: ['trace_letter'],
+    });
+    const missed = first.current();
+    if (!missed) throw new Error('empty session');
+    expect(missed.reasonCodes[0]).toBe('new_skill');
+    // Two clear misses on the same item.
+    for (let i = 0; i < 2; i++) {
+      await first.dispatch({
+        action: 'stroke',
+        points: [
+          { x: 0.01, y: 0.01, tMs: 0 },
+          { x: 0.99, y: 0.02, tMs: 1 },
+          { x: 0.01, y: 0.03, tMs: 2 },
+          { x: 0.99, y: 0.04, tMs: 3 },
+        ],
+      });
+      const res = await first.dispatch({ action: 'submit' });
+      expect(res?.record.result.status).toBe('incorrect');
+      await first.dispatch({ action: 'clear' });
+    }
+    await first.finish('complete');
+
+    const next = await startPlaySession(app, {
+      childId,
+      seed: 99,
+      now: () => 2_000,
+      types: ['trace_letter'],
+    });
+    expect(next.current()?.item.activityId).toBe(missed.item.activityId);
+    expect(next.current()?.reasonCodes.slice(0, 2)).toEqual([
+      'remediation',
+      `skill:${missed.item.targetSkillIds[0]}`,
+    ]);
   });
 });

@@ -4,6 +4,11 @@ import type { ConstructWordConfig, ConstructWordState } from '@huroofi/activitie
 import type { MatchSoundLetterConfig, MatchSoundLetterState } from '@huroofi/activities-audio';
 import { MATCH_SOUND_LETTER_TYPE } from '@huroofi/activities-audio';
 import { CONSTRUCT_WORD_TYPE } from '@huroofi/activities-word';
+import {
+  TRACE_LETTER_TYPE,
+  type TraceLetterConfig,
+  type TraceLetterState,
+} from '@huroofi/activities-writing';
 import type { EvaluationResult } from '@huroofi/content-schema';
 import { colors, spacing, type MascotState } from '@huroofi/design-system';
 import { mascotStateFor } from '@huroofi/mascot';
@@ -13,8 +18,12 @@ import { ControlButton } from '../game/ControlButton';
 import { Mascot } from '../game/Mascot';
 import { startPlaySession, type PlaySession } from '../game/play-session';
 import { SoundMatchView } from '../game/SoundMatchView';
+import { TraceView } from '../game/TraceView';
 import { feedbackText, strings } from '../strings';
 import { layout } from './layout';
+
+/** After this many tries the child may move on, so no item can trap them (plan §8). */
+const TRIES_BEFORE_SKIP = 3;
 
 type Phase =
   | { kind: 'starting' }
@@ -27,12 +36,14 @@ export function PlayScreen({
   childId,
   seed,
   now,
+  types,
   onExit,
 }: {
   app: BootedApp;
   childId: string;
   seed: number;
   now: () => number;
+  types?: readonly string[];
   onExit: () => void;
 }) {
   const [phase, setPhase] = useState<Phase>({ kind: 'starting' });
@@ -50,7 +61,7 @@ export function PlayScreen({
 
   useEffect(() => {
     let cancelled = false;
-    startPlaySession(app, { childId, seed, now }).then(
+    startPlaySession(app, { childId, seed, now, ...(types && { types }) }).then(
       (session) => {
         if (cancelled) return;
         if (!session.current()) {
@@ -65,7 +76,7 @@ export function PlayScreen({
     return () => {
       cancelled = true;
     };
-  }, [app, childId, seed, now]);
+  }, [app, childId, seed, now, types]);
 
   const session = phase.kind === 'playing' ? phase.session : null;
   const current = session?.current() ?? null;
@@ -175,28 +186,44 @@ export function PlayScreen({
         />
       )}
 
+      {current?.item.type === TRACE_LETTER_TYPE &&
+        (() => {
+          const config = current.def.validateConfig(current.item.config) as TraceLetterConfig;
+          const guide = app.traceGuides.guides.find((g) => g.letterId === config.letterId);
+          return guide ? (
+            <TraceView
+              state={current.run.state as TraceLetterState}
+              guide={guide}
+              now={now}
+              onAction={(a) => void onAction(a)}
+            />
+          ) : null;
+        })()}
+
       {result && (
-        <View style={[layout.center, { gap: spacing.md }]}>
-          <Text
-            testID="feedback"
-            accessibilityLiveRegion="polite"
-            style={[
-              layout.title,
-              { color: result.status === 'correct' ? colors.success : colors.retry },
-            ]}
-          >
-            {feedbackText(result.feedbackKey)}
-          </Text>
-          {result.status === 'correct' && (
+        <Text
+          testID="feedback"
+          accessibilityLiveRegion="polite"
+          style={[
+            layout.title,
+            { color: result.status === 'correct' ? colors.success : colors.retry },
+          ]}
+        >
+          {feedbackText(result.feedbackKey)}
+        </Text>
+      )}
+      {current &&
+        (result?.status === 'correct' ||
+          current.def.submissionCount(current.run.state) >= TRIES_BEFORE_SKIP) && (
+          <View style={layout.center}>
             <ControlButton
               testID="next"
               label={strings.next}
               primary
               onPress={() => void onNext()}
             />
-          )}
-        </View>
-      )}
+          </View>
+        )}
     </ScrollView>
   );
 }

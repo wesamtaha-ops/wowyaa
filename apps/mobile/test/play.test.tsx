@@ -19,7 +19,7 @@ const mascotState = () => screen.getByTestId('mascot').props.accessibilityValue.
 
 describe('Word Construction screen', () => {
   it('builds a word by tapping tiles, records one attempt and updates mastery', async () => {
-    const t = testDeps();
+    const t = testDeps({ focusTypes: ['construct_word'] });
     await render(<HuroofiApp deps={t.deps} />);
     await startPlaying();
     expect(mascotState()).toBe('asking');
@@ -34,7 +34,7 @@ describe('Word Construction screen', () => {
   });
 
   it('a double-tapped check records exactly one attempt', async () => {
-    const t = testDeps();
+    const t = testDeps({ focusTypes: ['construct_word'] });
     await render(<HuroofiApp deps={t.deps} />);
     await startPlaying();
     for (const letterId of await currentWordAnswer()) await tapTile(letterId);
@@ -46,7 +46,7 @@ describe('Word Construction screen', () => {
   });
 
   it('a wrong answer gets gentle feedback (never red) and the board can be fixed with undo', async () => {
-    const t = testDeps();
+    const t = testDeps({ focusTypes: ['construct_word'] });
     await render(<HuroofiApp deps={t.deps} />);
     await startPlaying();
     const answer = await currentWordAnswer();
@@ -69,7 +69,7 @@ describe('Word Construction screen', () => {
   });
 
   it('a hint highlights the next correct tile and is recorded with the attempt', async () => {
-    const t = testDeps();
+    const t = testDeps({ focusTypes: ['construct_word'] });
     await render(<HuroofiApp deps={t.deps} />);
     await startPlaying();
     const [first] = await currentWordAnswer();
@@ -83,7 +83,7 @@ describe('Word Construction screen', () => {
   });
 
   it('plays a whole session to the end and closes it as complete', async () => {
-    const t = testDeps();
+    const t = testDeps({ focusTypes: ['construct_word'] });
     await render(<HuroofiApp deps={t.deps} />);
     await startPlaying();
     for (let i = 0; i < SESSION_LENGTH; i++) {
@@ -100,7 +100,7 @@ describe('Word Construction screen', () => {
   });
 
   it('leaving mid-session keeps progress and marks the session abandoned', async () => {
-    const t = testDeps();
+    const t = testDeps({ focusTypes: ['construct_word'] });
     await render(<HuroofiApp deps={t.deps} />);
     await startPlaying();
     await solveCurrentWord();
@@ -114,7 +114,7 @@ describe('Word Construction screen', () => {
 
   it('respects reduced motion: the mascot changes state but does not move', async () => {
     jest.spyOn(AccessibilityInfo, 'isReduceMotionEnabled').mockResolvedValue(true);
-    const t = testDeps();
+    const t = testDeps({ focusTypes: ['construct_word'] });
     await render(<HuroofiApp deps={t.deps} />);
     await startPlaying();
     await solveCurrentWord();
@@ -125,7 +125,7 @@ describe('Word Construction screen', () => {
   });
 
   it('never shows sound-match items while no recordings are bundled', async () => {
-    const t = testDeps();
+    const t = testDeps({ focusTypes: ['construct_word'] });
     await render(<HuroofiApp deps={t.deps} />);
     await startPlaying();
     expect(screen.queryByTestId('replay')).toBeNull();
